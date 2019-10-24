@@ -1,0 +1,172 @@
+/*--- File Structure Reference
+
+
+sass/
+├── global/
+  ├── variables 
+  ├── utils
+├── base/
+  ├── reset
+  ├── base-styles
+  ├── typography
+├── interactions/
+  ├── animations
+  ├── transitions
+├── components/
+  ├── cards
+  ├── forms
+  ├── media
+  ├── modal
+  ├── tables
+
+
+-----*/
+
+
+
+
+
+/*-----
+
+HTML Semantic Tag Usage Notes
+
+<header></header> - This is only used for the main header bar of the app.
+<nav></nav> - This is only used for the main navigation of the app.
+<main></main> - This is only used for the main container of the app. 
+<footer></footer> - This is only used for the main footer bar of the app.
+
+When I eventually add a blog module, <header> and <footer> will be utilized within blog <article>'s 
+
+<article></article> - Used for top level "pages" of the app.
+
+<section></section> - Used for dividing <main> and <article> into sub-sections.
+
+<h1></h1> is used for main site title only.
+
+<h2></h2> is used for article-level headings.
+
+<h3></h3> is used within article sub-sections.
+
+
+------*/
+
+// Global utility stuff
+
+@import './global/variables.scss';
+@import './global/utils.scss';
+
+// Base Scaffolding
+
+@import './base/reset.scss';
+@import './base/base-styles.scss';
+@import './base/layout.scss';
+@import './base/typography.scss';
+
+// Interactions
+
+@import './interactions/animations.scss';
+@import './interactions/transitions.scss';
+
+// Components
+
+@import './components/card.scss';
+@import './components/button.scss';
+@import './components/modal.scss';
+@import './components/placeholder.scss';
+
+
+// Media Queries
+
+
+
+
+
+@media only screen and (max-width: 970px) {
+  .gallery {
+    justify-content: flex-end;
+  }
+  
+  .gallery-card:first-child {
+   // max-width: 90vw;
+  }
+  .gallery-card {
+    max-width: 44vw;
+  }
+  
+  .placeholder-card:first-child {
+   // max-width: 90vw;
+  }
+  .placeholder-card {
+    max-width: 44vw;
+  }
+  
+  .site-header {
+    flex-flow: column nowrap;
+    
+    nav {
+      margin: 1rem;
+    }
+    
+  }
+  
+  nav {
+    //width: 60%;
+  }
+  
+  .modal-pics {
+  width: auto;
+  max-width: 900px;
+  
+}
+  
+}
+
+@media only screen and (max-width: 667px) {
+  .gallery {
+    justify-content: center;
+  }
+  
+  .gallery-card {
+    max-width: 90vw;
+  }
+  
+   .placeholder-card {
+    max-width: 90vw;
+  }
+  
+    .modal-pics {
+  width: auto;
+  max-width: 70vw;
+  
+}
+  
+  
+  
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    background-attachment: scroll;
+    background-position: 45% bottom;
+    background-size: 300%;
+  }
+  
+  .site-header {
+    flex-flow: column nowrap;
+    
+    nav {
+      margin: 1rem;
+    }
+  }
+  
+  nav {
+    width: auto;
+  }
+  
+  .bubbleblock {
+    font-size: 15vmin;
+  }
+  
+  
+  
+}

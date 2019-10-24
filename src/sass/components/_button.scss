@@ -1,0 +1,67 @@
+.button-primary {
+  @include hover;
+  
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem auto 0;
+  background-color: $dark-lavendar;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: $purpleywhite;
+  outline: $purple-shadow;
+  
+ /* 
+  &:hover {
+    background-color: $black;
+    transition: all 300ms ease;
+  }*/
+  
+}
+
+
+.button-close {
+  
+  @include hover;
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+  height: 2em;
+  width: 2em;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  .fa-times {
+    height: 1.5em;
+    width: 1.5em;
+    color: $lavendar;
+   // vertical-align: center;
+  }
+  
+  &:hover {
+    @include slow-transition;
+    background-color: rgba($lavendar,0.1);
+    .fa-times {
+     // @include smooth-transition;
+      transform: scale(1.1);
+    }
+  }
+  
+  &:active {
+    @include smooth-transition;
+    outline: none;
+    background-color: rgba($lavendar,0.3);
+    
+    .fa-times {
+     // height: 1.7em;
+    //width: 1.7em;
+    }
+    
+  }
+  
+ // @include debug;
+}

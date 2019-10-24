@@ -1,0 +1,160 @@
+.gallery-card {
+  min-height: 20em;  
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: #fff; //lighten($pinkish, 10%); //lighten($lavendar,5%); 
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.06);
+  padding: 0.5em;
+  margin: 0.5em auto;
+  //flex: 1 1 auto;
+  display: flex;
+  @include column;
+  break-inside: avoid;
+  page-break-inside: avoid;
+   
+  figure {
+  height: 100%;
+  figcaption{
+    flex: 1 1 100%;
+    //@include debug;
+    //white-space: nowrap;
+    //max-height: 5em;
+    //overflow: hidden;
+   text-overflow: ellipsis;
+    padding: 0.3rem;
+  }
+  }
+  
+    animation: fadein 0.5s $ease-bounce;
+    animation-direction: normal; 
+    animation-fill-mode: both;
+  
+}
+
+$time-list: 20ms, 40ms, 60ms, 80ms, 100ms, 120ms;
+
+
+@each $time in $time-list {
+    $item: random(2);
+    $i: index($time-list, $time); 
+    .gallery-card:nth-child(#{$i}) {     
+        animation-delay: nth($time-list, $i);     
+    }
+}
+
+
+.gallery-card:hover {
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04);
+   //cursor: pointer;
+  transform: scale(1.03);
+    transition: box-shadow 300ms ease, background-color 500ms ease-out;
+  background-color: lighten($pinkish, 10%);
+  color: $offblack;
+  
+  button {
+    background-color: darken($dark-lavendar, 5%);
+    width: 100%;
+    transition: all 500ms ease;
+    
+  }
+  
+}
+
+.gallery-card:hover img:first-child {
+    filter: none;
+-webkit-filter: none; 
+}
+
+.gallery-card img:first-child {
+  border: 1px solid $purple-shadow;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+  width: 100%;
+  height: 20em;
+  object-fit: cover;  
+  
+   //filter: sepia(1) hue-rotate(200deg);
+//-webkit-filter: sepia(1) hue-rotate(210deg); 
+  
+}
+
+.gallery {
+   
+  //@include debug;
+  @include row-wrap;
+  margin: auto;
+  width: 100%;
+  max-width: 970px;
+  //max-width:1500px;
+  //justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+}
+
+
+.gallery-masonry {
+  //@include debug-focus;
+  //@include column-wrap;
+  width: 100%;
+  max-width: 970px;
+  //column-width: 300px;
+  column-count: 3;
+  //width: 100%;
+  column-gap: 0.5rem;
+  
+}
+
+.benefits-grid-container {
+  background-color: yellow;
+}
+
+
+
+details {
+  @include hover;
+  &[open] {
+    outline: none;
+  }
+  
+  
+}
+
+
+.tags {
+  display: flex;
+  @include row-wrap;
+  
+  dt {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 60%;
+  }
+  
+  dd {
+    color: $offblack;  
+    font-size: 70%;
+    display: inline-block;
+    padding: 0.4rem 0.5rem;
+    margin: 0.1rem;
+    background-color: $ws-cyan;
+    border-radius: 30px;
+  }
+  
+  
+}
+
+
+$colors-list: $purple-shadow $ws-light-blue $ws-pastel-green $ws-pastel-pink $ws-soft-cyan $ws-pastel-purple $ws-rose-purple $ws-soft-pastel-green $ws-lilac $purple-shadow $ws-light-blue $ws-purple $ws-pastel-green $ws-pastel-pink $ws-soft-cyan $ws-pastel-purple $ws-rose-purple $ws-soft-pastel-green $ws-lilac $ws-cyan ws-light-blue $ws-pastel-green $ws-pastel-pink $ws-soft-cyan $ws-pastel-purple $ws-rose-purple; 
+
+
+@each $current-color in $colors-list {
+    $item: random(2);
+    $i: index($colors-list, $current-color) + $item; 
+    dd:nth-child(#{$i}) {     
+        background-color: nth($colors-list, $i);     
+    }
+}
+

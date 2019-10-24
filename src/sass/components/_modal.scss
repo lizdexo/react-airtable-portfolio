@@ -1,0 +1,228 @@
+.modal-container {
+  position: fixed;
+  margin: auto;
+  background-color: $black-opacity;
+  width: 100vw;
+  height: 100vh;
+  top:0;
+  left: 0;
+  opacity: 0;
+  overflow-y: scroll;  
+  animation: appear 200ms ease forwards;
+  
+  
+  button:active {
+  animation: appear 200ms ease reverse forwards;
+}
+  
+  
+}
+
+
+#modal {
+  width: 90%;
+  height: auto;
+  //min-height: 90vh;
+  margin: 1em auto;
+  background-color: $purpleywhite;
+  animation:  grow 200ms ease forwards;
+  display: flex;
+  @include column;
+  justify-content: center;
+  border-radius: 5px;
+  @include layout-padding;
+  position: relative;
+  
+  header {
+ // @include debug;
+  display: flex;
+  flex-flow: row nowrap;
+   justify-content: space-between;
+  align-items: center;
+  
+  h3 { 
+    font-size: 2em;
+    flex: 0 1 auto;
+  }
+    
+    .button-close {
+      margin-bottom: 2em;
+    }
+  
+  
+  
+}
+  
+  p {
+    padding: 0.5rem;
+  }
+ 
+}
+
+
+
+.thumbnail-row {
+  @include debug;
+  display: flex;
+  @include row-wrap;
+  width: 100%;
+  
+}
+
+
+
+
+.modal-pics {
+  width: auto;
+  max-width: 70vw;
+  margin: auto;
+}
+
+
+
+.gallery-item-tabs{
+   display: flex;
+  @include row-wrap;
+  
+
+.tab-container {
+  flex: 0 1 auto;
+  //max-height: 90vh;
+  display: flex;
+  @include row-wrap;
+  margin-top: 2em;
+  
+  &:nth-child(2){
+    display: none;
+  }
+  
+  
+  .thumbnail-tab {
+  order: 1;
+  @include hover;
+  //width: 7em;
+  //height: 7em;
+    width: 10vw;
+    height:10vw;
+  //border: 3px solid $lavendar;
+  border-radius: 5px;
+  margin: 0.5rem;
+  display:block;
+  position: relative;
+  flex: 0 1 auto;  
+    background-color: rgba($lavendar, 0.2);
+    
+  }
+  
+  .thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 5px;
+    //z-index: 100;
+  }
+  
+  .tab-content {
+
+  background-color: rgba($purple-shadow, 0.1);
+    padding: 1rem;
+  width:100%;
+  height: 100%;
+  max-height:90vh;
+  position: absolute;
+  z-index: 300;  
+  bottom: 3em;
+  left:0;
+   // @include debug-focus;
+    
+    
+    a {
+      display: block;
+      width: 100%;
+      text-align: right;
+      padding: 0 1rem;
+      color: $dark-lavendar;
+      font-size: 90%;
+     // position: absolute;
+     // z-index: 350;
+     // bottom: 0.5em;
+      //right: 1em;
+    }
+   
+}
+  }
+  
+  .tab-content-pic {
+    //@include debug-focus;
+    width: 100%;
+    height: 98%;
+    object-fit: scale-down;
+    //object-position: 50% 30%;
+  }
+  
+  
+  
+  input[type="radio"] {
+	margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 100;
+visibility: hidden;
+}
+  
+input[type="radio"]:checked + label + .tab-content {
+  display: block;
+ visibility: visible;
+  transition: visibility 500ms ease;
+ // position: absolute;
+ z-index: 300;  
+ // bottom: 3em;
+  
+ // left:0;
+}
+
+}
+
+div[data-visibility=off]{
+  display: none;
+ visibility:hidden;
+}
+
+@at-root section[data-tab=tab0] {
+  display: none;
+ //visibility:hidden;
+}
+
+
+input[type="radio"]:checked + label {
+ 
+  border: 3px solid $lavendar;
+  transform: scale(1.1);
+   @include smooth-transition;
+  z-index: 500;
+  
+  & img {
+    filter: sepia(1) hue-rotate(200deg);
+-webkit-filter: sepia(1) hue-rotate(210deg); 
+    @include smooth-transition;
+  }
+ 
+}
+
+
+
+
+
+@at-root div[data-placeholder=gallery] {
+ content: '   ';
+  height: 90vh;
+  width: 100%;
+  margin-bottom: 5em;
+}
+
+@at-root img[src$=".pdf"]  {
+  display: none;
+}

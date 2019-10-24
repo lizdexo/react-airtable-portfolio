@@ -1,0 +1,222 @@
+// Color Palette
+
+$black: #111111;
+$offblack: #1d1d1d;
+
+$black-opacity: rgba($black, 0.9);
+
+$white: #fefefe;
+$purpleywhite: #FFFBFF;
+
+$ws-darkgrey: rgba(51, 51, 51,1);
+
+/*---- brand colors -----*/
+
+
+/*---- material colors -----*/
+
+$green50: #E8F5E9; //lightest
+$green100: #C8E6C9;
+$green200: #A5D6A7;
+$green300: #81C784;
+$green400: #66BB6A;
+$green500: #4CAF50;
+$green600: #43A047;
+$green700: #388E3C;
+$green800: #2E7D32;
+$green900: #1B5E20; //darkest
+
+$bright-green100: #B9F6CA;
+$bright-green200: #69F0AE;
+$bright-green400: #00E676;
+$bright-green700: #00C853;
+
+
+$grey50: #FAFAFA; //lightest
+$grey100: #F5F5F5;
+$grey200: #EEEEEE;
+$grey300: #E0E0E0;
+$grey400: #BDBDBD;
+$grey500: #9E9E9E;
+$grey600: #757575;
+$grey700: #616161;
+$grey800: #424242;
+$grey900: #212121; //darkest
+
+
+// colors
+
+$pinkish: #E2BBFF;
+$lavendar: #9999FF;
+$dark-lavendar: darken($lavendar, 10%);
+$dull-lavendar: #E2CCFF;
+$double-dull-lav: lighten($dull-lavendar, 5%);
+
+$purple-shadow: #B3ABDD;
+
+$purpleywhite: #FFFBFF;
+
+$brightblue: #00ffff;
+$softblue: #CCFFFF;
+
+
+//websafe colors
+
+$ws-lilac: rgba(204, 153, 255, 1); //#CC99FF
+$ws-rose-purple: rgba(204, 153, 204,1); //#CC99CC
+$ws-pastel-purple: rgba(204, 204, 255,1); //#CCCCFF
+$ws-pastel-pink: rgba(255, 204, 255, 1); //#FFCCFF
+$ws-light-blue: rgba(204, 255, 255,1); //#CCFFFF
+$ws-purple: rgba(153, 102, 204,1); //#9966CC
+$ws-brighter-purple: rgba(153, 102, 255,1 ); //#9966FF
+$ws-cyan: rgba(102, 255, 255,1); //#66FFFF
+$ws-soft-cyan: rgba(153, 255, 255,1); //#99FFFF
+$ws-pastel-green: rgba(102, 255, 204,1); //#66FFCC
+$ws-soft-pastel-green: rgba(153, 255, 204,1); //#99FFCC
+
+$ws-offblack: rgba(51, 51, 51,1); //#333333
+
+
+
+// Color Schemes
+
+$primary: $green900;
+$primary-dark: darken($primary, 5%);
+$primary-light: lighten($primary, 5%);
+
+
+$secondary: $bright-green700;
+$secondary-dark: darken($secondary, 5%);
+$secondary-light: lighten($secondary, 5%);
+
+
+$background: $lavendar;
+$footer-bgcolor: rgba($black, 0.9);
+
+$background-shadow: darken($background, 20%);
+
+// Color States
+
+$warning: #FF3333; //rgba(255, 51, 51, 1)
+$alert: #fff;
+$success: $bright-green400;
+$message: #fff;
+
+
+// Sizing & Spacing
+
+$padding-large: 30px;
+$padding-medium: 20px;
+$padding-small: 10px;
+$padding-extra-small: 5px;
+
+$margin-large: 30px;
+$margin-medium: 20px;
+$margin-small: 10px;
+$margin-extra-small: 5px;
+
+
+$navheight: 20%;
+
+
+
+
+// Typography
+
+// font options
+$anton: 'Anton', sans-serif;
+$fugaz: 'Fugaz One', cursive;
+$chewy: 'Chewy', cursive;
+$leckerli: 'Leckerli One', cursive;
+$oleo: 'Oleo Script', cursive;
+$bungee: 'Bungee', cursive;
+$oleo-swash: 'Oleo Script Swash Caps', cursive;
+$bungee-hairline: 'Bungee Hairline', cursive;
+$bungee-outline: 'Bungee Outline', cursive;
+$bungee-shade: 'Bungee Shade', cursive;
+
+
+$sans-serif: 'Roboto', sans-serif;
+$heading: 'Heebo', sans-serif;
+
+
+// Shadows
+
+
+$text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+
+$color-text-shadow: 1px 1px 1px $purple-shadow,
+        1px 2px 1px $purple-shadow,
+        1px 3px 1px $purple-shadow,
+        1px 4px 1px $purple-shadow,
+        1px 5px 1px $purple-shadow,
+        1px 6px 1px $purple-shadow,
+        1px 7px 1px $purple-shadow,
+        1px 8px 1px $purple-shadow,
+        1px 9px 1px $purple-shadow,
+        1px 10px 1px $purple-shadow,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+
+
+
+$color-text-shadow-purple: 1px 1px 1px $purple-shadow,
+        1px 2px 1px $purple-shadow,
+        1px 3px 1px $purple-shadow,
+        1px 4px 1px $purple-shadow,
+        1px 5px 1px $purple-shadow,
+        1px 6px 1px $purple-shadow,
+        1px 7px 1px $purple-shadow,
+        1px 8px 1px $purple-shadow,
+        1px 9px 1px $purple-shadow,
+        1px 10px 1px $purple-shadow,
+    1px 18px 6px rgba($black,0.4),
+    1px 22px 10px rgba($black,0.2),
+    1px 25px 35px rgba($black,0.2),
+    1px 30px 60px rgba($black,0.4);
+
+$color-text-shadow-lowered: 1px 1px 1px $purple-shadow,
+        1px 2px 1px $purple-shadow,
+        1px 3px 1px $purple-shadow,
+        1px 4px 1px $purple-shadow,
+        1px 5px 1px $purple-shadow,
+        1px 6px 1px $purple-shadow,
+        1px 7px 1px $purple-shadow,
+        1px 8px 1px $purple-shadow,
+        1px 9px 1px $purple-shadow,
+        1px 10px 1px $purple-shadow;
+   
+
+
+$purple-inset-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06), 
+  0px 10px 16px rgba(0, 0, 0, 0.1), 
+  1px 2px 1px rgba(160, 148, 205, 0.8), 
+  inset -4px -4px 4px #E2DDFF, 
+  inset -2px -2px 10px #BCACF7, 
+  inset -4px -4px 20px rgba(182, 182, 182, 0.5);
+
+
+
+// animation
+
+$ease-bounce: cubic-bezier(.75, .1, .1, 1.25);
+
+
+
+
+

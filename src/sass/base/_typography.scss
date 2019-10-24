@@ -1,0 +1,92 @@
+
+
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+ 
+  h1 { 
+   // @include debug-focus;
+    flex: 0 1 auto;
+    color: $black;
+    font-family: $bungee-hairline;  
+    font-size: 10vmin;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+  }
+ 
+
+
+h2 {
+  font-size: 2em;  
+  font-family: bungee;
+}
+
+h3 {
+  //@include debug-focus;
+  font-family: bungee;
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+
+.bubbleblock {
+    text-shadow: $color-text-shadow;
+    color: $purpleywhite;
+    font-family: $bungee;
+    filter: sepia(1) hue-rotate(200deg);
+    -webkit-filter: sepia(1) hue-rotate(210deg); 
+    font-size: 10vmin;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  
+  &:hover {
+    text-shadow: $color-text-shadow-lowered;
+    transition: all 200ms ease;
+    cursor: crosshair;
+  }
+}
+
+
+// misc.
+
+.frikkincool {
+   
+    text-shadow: $color-text-shadow;
+    color: $purpleywhite;
+    font-family: $bungee-hairline;
+    filter: sepia(1) hue-rotate(200deg);
+    -webkit-filter: sepia(1) hue-rotate(210deg); 
+    font-size: 10vmin;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
