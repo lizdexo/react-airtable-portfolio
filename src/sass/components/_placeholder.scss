@@ -1,0 +1,110 @@
+$top: rgba($lavendar,0.1);
+$bottom: rgba($lavendar,0.3);
+
+
+.placeholder {
+  min-height: 200vh;
+  width: 90vw;
+  //background-color: rgba($lavendar,0.1);
+  background: linear-gradient(125deg, $top, $bottom);
+  background-size: 400%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 1em;
+  padding-top: 3em;
+  animation: loading2 5s linear infinite both;
+  
+  
+  .fa-spinner{
+    height: 5em;
+    width: 5em;
+    color: rgba($lavendar,0.3);
+  }
+}
+
+
+.placeholder-card {
+  height: 40em;  
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: transparent;
+  border-radius: 5px;  
+  padding: 0.5em;
+  margin: 0.5em;
+  display: flex;
+  @include column;
+  opacity: 0.9;
+  vertical-align: top;
+   
+  figure {
+  height: 100%;
+  figcaption{
+    flex: 1 1 100%;
+    //@include debug;
+    //white-space: nowrap;
+    //max-height: 5em;
+    //overflow: hidden;
+   text-overflow: ellipsis;
+  }
+  }
+  
+    animation: fadein 0.5s $ease-bounce;
+    animation-direction: normal; 
+    animation-fill-mode: both;
+  
+}
+
+.placeholder-card-inner {
+  height: 100%;
+  width: 100%;
+  //background-color: rgba($lavendar,0.1);
+  background: linear-gradient(125deg, $top, $bottom);
+  background-size: 400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: inherit;  
+  animation: loading 0.3s linear infinite both;
+  
+  .fa-spinner{
+    height: 5em;
+    width: 5em;
+    color: rgba($lavendar,0.3);
+  }
+}
+
+.loading-buffer {
+  content: '   ';
+  width: 100%;
+  height: 150vh;
+}
+
+
+$time-list: 20ms, 30ms, 40ms, 50ms, 60ms, 70ms;
+
+
+@each $time in $time-list {
+    $item: random(2);
+    $i: index($time-list, $time); 
+    .placeholder-card:nth-child(#{$i}) {     
+        animation-delay: nth($time-list, $i);     
+    }
+}
+
+
+
+
+@keyframes loading {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

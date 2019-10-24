@@ -1,0 +1,76 @@
+@mixin debug {
+  border: 1px dotted red;
+}
+
+@mixin debug-focus {
+  background-color: yellow;
+}
+
+@mixin vh100 {
+    min-height: -webkit-calc(var(--vh,1vh) * 100);
+    min-height: -moz-calc(var(--vh,1vh) * 100);
+    min-height: -o-calc(var(--vh,1vh) * 100);
+    min-height: calc(var(--vh,1vh) * 100);
+}
+
+
+
+@mixin fill-remaining-height {
+         height: -webkit-calc(80vh - #{$navheight});
+       height: -moz-calc(80vh - #{$navheight});
+       height: -o-calc(80vh - #{$navheight});
+       height: calc(80vh - #{$navheight});
+       height: -webkit- calc(var(--vh,1vh) * 100 - #{$navheight});
+       height: -moz- calc(var(--vh,1vh) * 100 - #{$navheight});
+       height: -o- calc(var(--vh,1vh) * 100 - #{$navheight});
+       height: calc(var(--vh,1vh) * 100 - #{$navheight});
+}
+
+
+// Flex Shortcuts
+
+
+@mixin row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+@mixin column-wrap {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+
+// Templating
+
+@mixin fontcolor-main {
+  color: $white;
+}
+
+@mixin hover {
+  cursor: pointer;
+}
+
+@mixin smooth-transition {
+  transition: all 300ms ease;
+}
+
+
+@mixin slow-transition {
+  transition: all 500ms ease;
+}
+
+@mixin layout-padding {
+  padding: 1rem;
+}
+
+@mixin alt-background {
+  background-position: 50%;
+  background-attachment: fixed;
+  background-size: cover;
+}
