@@ -82,4 +82,5 @@ footer {
   text-align: center;
   background-color: $footer-bgcolor;
   @include fontcolor-main;
+  width: 100%;
 }
