@@ -60,7 +60,7 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
-        <Header siteTitle="Liz Dudek">
+        <Header siteTitle="Portfolio">
           <Nav pages={route} />
         </Header>
 
@@ -68,6 +68,7 @@ class App extends Component {
           <section className="content">
             
          <LazyLoad once placeholder={<Spinner />}>
+           <Switch>
               <Route exact path="/">
                 <Home />
               </Route>
@@ -77,12 +78,8 @@ class App extends Component {
               </Route>
               <Route path="/contact">
                 <Contact />
-              </Route>
-       
-              
-          
-            
-              
+              </Route>   
+           </Switch>
             </LazyLoad>
           </section>
         </Main>
