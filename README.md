@@ -1,24 +1,59 @@
 # About this Project
 
-Hi there! This is my personal portfolio project. It's built with [create-react-app](https://github.com/facebook/create-react-app) and renders data from [Airtable](https://airtable.com/). It's styled using Sass/scss via [node-sass](https://github.com/sass/node-sass).
+Hi there! This is my personal portfolio project.
+
+Build stack:
+
+- Scaffolding: [create-react-app](https://github.com/facebook/create-react-app)
+- Navigation: [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- Database: [Airtable](https://airtable.com/).
+- Styling: [node-sass](https://github.com/sass/node-sass)
+- IDE: [Glitch](https://glitch.com/)
+- Deployment: [Netlify](https://www.netlify.com/)
 
 ## Why React?
 
-I know that React isn't necessarily recommended for simple websites like this, but I've been needing to put together a portfolio website for a very long time and I decided this would be a perfect chance to really play around with React (and to practice some javascript in general).
+I know that React isn't necessarily recommended for simple websites like this, but I've been needing to put together a portfolio website for a very long time and I decided this would be a perfect chance to really play around with React.
 
-In particular, I wanted to learn how to work with the Airtable API since that is where I have been storing all of the information for the various design projects I've done. I figured it would be cool to do this in a way where I could play around with the data in an environment that's meant for dynamically rendering components.
+In particular, I wanted to learn how to work with the Airtable API since that is where I have been storing & organizing all of my design projects. I had originally wanted to do this project in [Gatsby](https://www.gatsbyjs.org/) (which is meant for static stuff like portfolios), but I don't know anything about GraphQL yet and I _really_ wanted to have something quick. That meant using React since I'm already familiar with the basics and I could do the type of API calls I'm used to doing.
 
-I also really really really love component-based development, because writing the same html a hundred times sucks.
+I also really really really love component-based development, because copy/pasting the same html a hundred times sucks.
 
-## Future Plans
+## Up Next
 
-Eventually, I plan to redo the whole thing in [Gatsby](https://www.gatsbyjs.org/) which is meant specifically for static stuff like portfolios and blogs. I had originally wanted to do this portfolio project in Gatsby from the beginning, but I don't know anything about GraphQL yet and I _really_ wanted to have something quick. That meant using React since I'm already familiar with the basics and I could do the type of API calls I'm used to doing. Soon I'll have time to start learning Gatsby & GraphQL... and I'll already have a working website while I do that!
+[x] Add react-router for linking between pages  
+[ ] write About page (what do I say about myself??)  
+[ ] figure out what exactly to put on the homepage  
+[ ] add some links to the footer  
+[ ] create a form for the Contact page that submits data to Airtable  
+[ ] add a page to feature CodePen projects    
+[ ] add markdown to the "description" Gallery field, and render with [react-markdown](https://github.com/rexxars/react-markdown)  
+[ ] figure out why GitHub is giving me a bunch of security warnings  
+[ ] do an accessibility pass to make sure I meet basic standards  
 
-My other reason for starting with React is that I do plan to convert this whole codebase to be used for a "playground" type of project website where I'll try out all sorts of cool dynamic stuff that React is actually meant for. Since everything is component based, it'll be easy to replace whatever I need to. The hard part will probably just be refactoring my css. It's a bit of a mess right now.
+*bugs to fix*
 
-### Up Next
+[ ] figure out what's wrong with my manifest.json file   
 
-I'm trying to figure out React Router right now. Soon I'll have navigation and stuff!
+**big future plans**
+
+[ ] do a more in-depth accessibility analysis  
+[ ] add a blog module that uses markdown  
+[ ] add a blog subdomain to netlify  
+[ ] clean up & refactor my css a LOT  
+[ ] clean up & refactor some of my javascript and component organization
+
+**even bigger future plans**
+
+[ ] learn GraphQL and redo the entire thing in Gatsby  
+[ ] migrate everything out of Glitch to my own local environment  
+[ ] convert this codebase to be used for [dexo.dev](https://dexo.dev/)  
+[ ] redo the layout so that I can have a sidebar component  
+[ ] look into SEO stuff
+
+---
+
+---
 
 # Credits
 
