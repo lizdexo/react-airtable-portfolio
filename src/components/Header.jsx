@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
 import Nav from './Nav.jsx'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
@@ -8,9 +15,9 @@ class Header extends Component {
   render() {
     return (
       <header className="site-header" style={this.props.style}>
-        <h1 className="bubbleblock">{this.props.text}</h1>
-        <div className="spacer"></div>
-        <Nav />
+        <NavLink to="/" activeClassName="home-selected"> <h1 className="bubbleblock">{this.props.siteTitle}</h1></NavLink>
+        <div className="spacer"></div> 
+        {this.props.children}
       </header>
     )
   }

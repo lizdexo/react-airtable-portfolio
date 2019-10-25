@@ -80,9 +80,9 @@ nav {
           width: 100%;
           display: block;
           padding: 15px;
-        border-radius: 8px;
+        border-radius: 3px;
         
-        &:hover, &:focus {
+        &:hover {
           background: $black;
           color: $purpleywhite;
            transition: all 200ms ease;
@@ -90,8 +90,20 @@ nav {
       border-radius: 3px;
      outline: none;
         }
+        
+        &:focus {
+          background-color: $pinkish;
+        }
       }
       
+      .selected {
+        background-color: $pinkish;
+        cursor: auto;
+        
+        li a {
+          cursor: crosshair;
+        }
+      }
    
       
     }

@@ -1,57 +1,49 @@
-import React, { Component } from 'react'
-
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 
 class Items extends Component {
   constructor(props) {
     super(props);
-  };
+  }
 
   render() {
     return (
-      <li>     
-          <a 
-            href={this.props.url}
-           
-            rel="noopener noreferrer">{this.props.label}
-        </a>       
+      <li>
+        <NavLink to={this.props.url} activeClassName="selected">
+          {this.props.label}
+        </NavLink>
       </li>
-    )
+    );
   }
 }
+
 
 class Nav extends Component {
-  page = [
-    {
-      id: 1,
-      url: "#",
-      label: "portfolio",
-    },
-    {
-      id: 2,
-      url: "#",
-      label: "about",
-    },
-    {
-      id: 3,
-      url: "#",
-      label: "contact",
-    },
-    
-
-  ];
+   constructor(props) {
+    super(props);
+  } 
 
   render() {
     return (
-  <nav>
-      <ul>
-        {this.page.map((page, index, label) => (
-          <Items {...page} />
-        ))}
-      </ul>
-  </nav>
-    )
+      <nav>
+        <ul>
+          {this.props.pages.map((page, index, label) => (
+             <li>
+        <NavLink to={page.url} activeClassName="selected">
+          {page.label}
+        </NavLink>
+      </li>
+          ))}
+        </ul>
+      </nav>
+    );
   }
 }
 
-
-export default Nav
+export default Nav;
