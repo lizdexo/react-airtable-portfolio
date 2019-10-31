@@ -1,12 +1,3 @@
-
-# Hi! Please don't remix it. I'm refactoring stuff. :)
-
-----
-----
-----
-----
-----
-
 ## About this Project
 
 Hi there! This is my personal portfolio project.

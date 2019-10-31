@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import LazyLoad from "react-lazyload";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+  useHistory,
+  useLocation,
+  useParams
+} from "react-router-dom";
 
 import logo from "./logo.svg";
 import "./sass/index.scss";
@@ -18,7 +27,7 @@ import LoremIpsum, {
 } from "./components/Placeholder.jsx";
 
 /* pages */
-import Gallery from "./components/AirtableGallery.jsx";
+import Gallery from "./components/Router2-AirtableGallery.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Home from "./components/Home.jsx";
@@ -57,7 +66,10 @@ const route = [
 
 class App extends Component {
 
+ 
+  
   render() {
+       
     return (
       <div className="app-container">
         <Header siteTitle="Portfolio">
@@ -65,14 +77,16 @@ class App extends Component {
         </Header>
 
         <Main>
-          <section className="content">
+          <section className="main-inner">
             
-         <LazyLoad once placeholder={<Spinner />}>
+       
            <Switch>
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route path="/gallery" component={Gallery} />
+              <Route path="/gallery">
+             <Gallery />
+             </Route>
               <Route path="/about">
                 <About />
               </Route>
@@ -80,7 +94,7 @@ class App extends Component {
                 <Contact />
               </Route>   
            </Switch>
-            </LazyLoad>
+            
           </section>
         </Main>
         <Footer text="I'm gonna put some useful links here" />

@@ -15,7 +15,6 @@ body {
     @include column;
     justify-content: flex-start; 
     align-items: center;
-    //align-items: stretch;
     min-height: 100vh;
 }
 
@@ -29,7 +28,6 @@ body {
   align-content: center;
   @include layout-padding; 
   flex: 0 1 auto;
- // flex-shrink: 1;
   width: 100%;
  max-width: calc(980px + 2rem);
   
@@ -48,24 +46,17 @@ main {
           //@include debug;
             margin: 0;
             flex: 1 1 auto;
-            //flex-grow: 1;
             width: 100%;
- // min-height: calc(100vh - 5em);
-            //height: auto;
-            //background: yellow;
             @include column;
             align-items: center;
-            //justify-content: center;
            align-content: center;
             @include layout-padding; 
 }       
 
-.content {
+.main-inner {
  //@include debug-focus;
   width: 100%;
   max-width: 970px;
-  
-  //max-width: 1070px;
 }
 
 .intro {
@@ -77,7 +68,6 @@ footer {
   //@include debug; 
   @include layout-padding; 
   flex: 0 1 auto;
-  //flex-shrink: 1;
   min-height: 5em;
   text-align: center;
   background-color: $footer-bgcolor;

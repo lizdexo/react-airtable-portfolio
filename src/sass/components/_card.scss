@@ -17,6 +17,10 @@
    
   figure {
   height: 100%;
+    img{
+      background-color: #fff;
+    }
+    
   figcaption{
     flex: 1 1 100%;
     //@include debug;

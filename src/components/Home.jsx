@@ -14,7 +14,7 @@ class Home extends Component {
         <h3>This site is under construction</h3>
         
        <p>Skip to the <Link to="/Gallery">Gallery</Link> to see my portfolio stuff</p>
-        
+       
       </article>
     )
   }
