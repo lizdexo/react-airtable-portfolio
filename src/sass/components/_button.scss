@@ -65,3 +65,29 @@
   
  // @include debug;
 }
+
+.view-link {
+  
+  @include hover;
+  background-color: $dark-lavendar;  
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  
+  
+  
+  &:hover {
+    color: $purpleywhite;
+    background-color: $black;
+  }
+  
+  &:active {
+    
+    
+  
+  }
+  
+ // @include debug;
+}

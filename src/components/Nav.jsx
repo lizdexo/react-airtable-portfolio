@@ -7,21 +7,6 @@ import {
   NavLink
 } from "react-router-dom";
 
-class Items extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <li>
-        <NavLink to={this.props.url} activeClassName="selected">
-          {this.props.label}
-        </NavLink>
-      </li>
-    );
-  }
-}
 
 
 class Nav extends Component {
@@ -35,7 +20,7 @@ class Nav extends Component {
         <ul>
           {this.props.pages.map((page, index, label) => (
              <li>
-        <NavLink to={page.url} activeClassName="selected">
+        <NavLink to={page.url} activeClassName="selected" data-link="internal">
           {page.label}
         </NavLink>
       </li>

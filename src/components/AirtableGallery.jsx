@@ -5,6 +5,7 @@ import GalleryModal from "./ModalRenderer.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LazyLoad from 'react-lazyload';
 import { Spinner, SpinnerCards } from './Placeholder.jsx';
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
 
 //need to add this: https://reacttraining.com/react-router/web/example/modal-gallery
 
@@ -45,7 +46,7 @@ class Projects extends Component {
       this.setState({recordsInit: records});
       
    //   this.setState({records});
-        // console.log(records);
+        
 
         fetchNextPage();
       });
@@ -70,7 +71,7 @@ class Projects extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.records !== this.state.records) {
-      console.log("records initially loaded");
+      console.log("records initially loaded", this.state.content);
     } else {
     }
 
@@ -78,12 +79,19 @@ class Projects extends Component {
       console.log("record content loaded:", this.state.content[0]);
     } else {
       console.log("no new content loaded yet");
+      
     }
+    
+     
   }
 
   handleShow = (record, name, desc, attachments, skilltags, softwaretags) => {
     if (this.state.showModal !== true) {
       this.setState({ showModal: true, selectedRecord: record });
+      
+      var hashtag = record;
+      window.location.hash = hashtag;
+      
       console.log("the modal is open");
     } else {
       console.log("modal is already open");
@@ -109,11 +117,13 @@ class Projects extends Component {
   updateContent(content) {
     const contentToUpdate = content;
     this.setState({ content: contentToUpdate });
+   
   }
 
   handleClose = (e) => {
     this.setState({ showModal: false });
-    console.log("the modal is closed");
+    console.log("the modal is closed");    
+    window.history.back();
   
   };
 
@@ -133,7 +143,10 @@ reorder = (arr, columns) => {
             col++;
         }
         this.setState({ records: out, columns: columns });
+ 
 }    
+
+
 
 
   render() {
@@ -150,8 +163,9 @@ reorder = (arr, columns) => {
                 <img src={record.fields["Cover"][0].url} alt="project cover" />
                 <figcaption>
                   <h3>{record.fields["Name"]}</h3>
+                  <h4>{record.index}</h4>
                   <p>
-                  <time datetime={record.fields["YearText"]}>{record.fields["YearText"]}</time>
+                  <time dateTime={record.fields["YearText"]}>{record.fields["YearText"]}</time>
                   </p>
              
 
@@ -159,7 +173,7 @@ reorder = (arr, columns) => {
               <dl className="tags">
                 <dt>Tags</dt>
                 {record.fields["Tags"].length > 0 ? (
-                  record.fields["Tags"].map((tag, index) => <dd>{tag}</dd>)
+                  record.fields["Tags"].map((tag, index) => <dd key={index}>{tag}</dd>)
                 ) : (
                   <dd>No example available</dd>
                 )}
@@ -177,7 +191,8 @@ reorder = (arr, columns) => {
                      </figcaption>
               </figure>
             
-                 <button
+
+              <button
                 onClick={() =>
                   this.handleShow(
                     record.fields["recordID"],
@@ -185,7 +200,7 @@ reorder = (arr, columns) => {
                     record.fields["Description"],
                     record.fields["Attachments"],
                     record.fields["Tags"],
-                    record.fields["Software"],
+                    record.fields["Software"]
                   )
                 }
               className="button-primary"
@@ -193,6 +208,7 @@ reorder = (arr, columns) => {
                 view
               </button>
               
+        
               
             </Card>
             
@@ -202,7 +218,7 @@ reorder = (arr, columns) => {
         )}
 
         {this.state.showModal ? (
-          <div className="modal-container" onClick={this.handleClose}>
+                   
             <GalleryModal
               recordID={this.state.selectedRecord}
               title={this.state.content[0]}
@@ -213,11 +229,11 @@ reorder = (arr, columns) => {
               onClick={this.handleClose}
             >    
             </GalleryModal>        
-          </div>
+       
         ) : (
           null
         )}
-               
+                      
       </article>
     );
   }

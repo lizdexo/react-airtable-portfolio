@@ -13,13 +13,13 @@
 body {
   background: $lavendar; 
   background: $lavendar url(https://images.unsplash.com/photo-1517504734587-2890819debab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1639&q=80);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%231d1d1d' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23000000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%231a1a1a' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23030303' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23171717' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23060606' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23131313' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23090909' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%230f0f0f' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%230c0c0c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%230a0a0a' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%230e0e0e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%231d1d1d' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23000000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%231a1a1a' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23030303' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23171717' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23060606' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23131313' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23090909' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%230f0f0f' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%230c0c0c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%230a0a0a' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%230e0e0e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");  
   background-repeat: no-repeat;
    background-attachment: scroll;
     background-position: 45% bottom;
     background-size: 300%;
   @include alt-background;
+ 
 }
 
 
@@ -28,97 +28,23 @@ body {
 a {
   color: $softblue;
   
+}
+
+
+a:not([data-link=internal]) {
+    line-height: 1.2;
+    padding: 0 0.05rem;
+    white-space: nowrap;
+  
   &:hover {
-   // font-weight: bold;
-  }
+    display: inline-block;
+    background-color: $pinkish;
+    color: $black;
+    transition: all 300ms ease;       
+  }  
 }
-
-// Nav links
-
-
-
-nav {
   
-  $nav-adjustment: calc(10px + 1rem);
   
- //@include debug-focus;
-  flex: 1 1 auto;
-  //height: 100%;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: $nav-adjustment 1rem 1rem;
-  
-  ul {
-  //@include debug;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
-  padding-left: 0;
-  margin: 0;
-  width: 100%;
-  height: auto;
-    
-    li {
-      //@include debug-focus;
-      list-style-type: none;
-      //text-transform: uppercase;    
-     margin: 0 2px;
-     min-width: 5em;
-      height: 100%;
-      text-align: center;
-      font-size: 1em;
-      
-      
-      a {
-        //@include debug-focus;
-          background: rgba($dark-lavendar, 0.2);
-          color: $black;
-          width: 100%;
-          display: block;
-          padding: 15px;
-        border-radius: 3px;
-        
-        &:hover {
-          background: $black;
-          color: $purpleywhite;
-           transition: all 200ms ease;
-      //line-height: 1;
-      border-radius: 3px;
-     outline: none;
-        }
-        
-        &:focus {
-          background-color: $pinkish;
-        }
-      }
-      
-      .selected {
-        background-color: $pinkish;
-        cursor: auto;
-        
-        li a {
-          cursor: crosshair;
-        }
-      }
-   
-      
-    }
-  }
-}
-
-
-article {
-
- 
-}
-
-
-
-
 
 
 

@@ -40,6 +40,7 @@ class GalleryModal extends Component {
 
   render() {
     return (
+      <div className="modal-container" onClick={this.props.onClick}>
       <article id="modal" onClick={event => event.stopPropagation()}>
         <header> 
         <h3>{this.props.title}</h3><CloseButton onClick={this.props.onClick} /></header>
@@ -82,7 +83,7 @@ class GalleryModal extends Component {
 
             <div class="tab-content" data-tab="default" data-visibility="off">
               <img className="tab-content-pic" src={this.props.pics[0].url} />
-              <a href={this.props.pics[0].url} target="_blank">
+              <a href={this.props.pics[0].url} target="_blank" data-link="internal">
                 view even larger
               </a>
             </div>
@@ -108,7 +109,7 @@ class GalleryModal extends Component {
                   data-visibility="off"
                 >
                   <img className="tab-content-pic" src={pic.url} />
-                  <a href={pic.url} target="_blank">
+                  <a href={pic.url} target="_blank" data-link="internal">
                     view even larger
                   </a>
                 </div>
@@ -124,6 +125,7 @@ class GalleryModal extends Component {
         </section>
         {this.props.children}
       </article>
+      </div>
     );
   }
 }

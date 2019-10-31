@@ -15,6 +15,5 @@ class Footer extends Component {
 }
 
 
-//More header types will be added to this file soon
 
 export default Footer

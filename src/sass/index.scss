@@ -69,10 +69,12 @@ When I eventually add a blog module, <header> and <footer> will be utilized with
 
 // Components
 
+@import './components/unorganized.scss';
 @import './components/card.scss';
 @import './components/button.scss';
 @import './components/modal.scss';
 @import './components/placeholder.scss';
+@import './components/nav.scss';
 
 
 // Media Queries
