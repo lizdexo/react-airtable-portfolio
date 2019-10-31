@@ -72,7 +72,7 @@ class App extends Component {
        
     return (
       <div className="app-container">
-        <Header siteTitle="Portfolio">
+        <Header siteTitle="Liz Dudek">
           <Nav pages={route} />
         </Header>
 
