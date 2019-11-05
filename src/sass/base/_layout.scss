@@ -49,7 +49,7 @@ main {
             width: 100%;
             @include column;
             align-items: center;
-           align-content: center;
+            align-content: center;
             @include layout-padding; 
 }       
 

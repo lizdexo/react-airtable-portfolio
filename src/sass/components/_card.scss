@@ -99,17 +99,25 @@ $time-list: 20ms, 40ms, 60ms, 80ms, 100ms, 120ms;
 }
 
 
+
+
 .gallery-masonry {
-  //@include debug-focus;
-  //@include column-wrap;
-  width: 100%;
-  max-width: 970px;
-  //column-width: 300px;
-  column-count: 3;
-  //width: 100%;
-  column-gap: 0.5rem;
+
+ display: flex;
+ width: auto;
+ max-width: 970px;
+margin-left: -0.5rem;
+
   
 }
+
+
+.my-masonry-grid_column {
+  padding-left: 0.5rem; /* gutter size */
+  //background-clip: padding-box;
+}
+
+
 
 .benefits-grid-container {
   background-color: yellow;

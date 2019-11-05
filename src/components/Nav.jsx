@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
   NavLink
 } from "react-router-dom";
 
@@ -19,7 +15,7 @@ class Nav extends Component {
       <nav>
         <ul>
           {this.props.pages.map((page, index, label) => (
-             <li>
+             <li key={index}>
         <NavLink to={page.url} activeClassName="selected" data-link="internal">
           {page.label}
         </NavLink>

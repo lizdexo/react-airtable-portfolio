@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown';
 import ReadMe from './READMECopy.md';
+import { Spinner, SpinnerCards } from "./Placeholder.jsx";
 
 class About extends Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class About extends Component {
   
   
     componentDidMount() {
-    // Get the contents from the Markdown file and put them in the React state, so we can reference it in render() below.
     fetch(ReadMe).then(res => res.text()).then(text => this.setState({ readme: text }));
   }
   
@@ -26,9 +26,23 @@ class About extends Component {
           <p>I'm gonna put some stuff about me here</p>
         </section>
         
-        <section id="readme">
-          <ReactMarkdown source={this.state.readme} linkTarget="_blank" />
-        </section>
+  
+          
+          
+           {this.state.readme !== '' ? (
+                <section id="readme">
+          <ReactMarkdown linkTarget="_blank">
+          {this.state.readme}
+          </ReactMarkdown>
+      </section>
+          
+          ) : (
+       <Spinner />
+      )}
+          
+          
+        
+       
         
       </article>
     )

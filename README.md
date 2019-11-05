@@ -1,5 +1,7 @@
 
-# Hi! Please don't remix it. I'm refactoring stuff. :)
+# Hi! Please don't remix it.* I'm refactoring stuff. :)
+
+*I mean, unless you really want to dive into this mess. If so, have fun!
 
 ----
 ----
@@ -33,10 +35,11 @@ I also really really really love component-based development, because copy/pasti
 - [x] Add react-router for linking between pages  
 - [ ] write About page (what do I say about myself??)  
 - [ ] figure out what exactly to put on the homepage  
-- [ ] add some links to the footer  
+- [x] add some links to the footer  
 - [ ] create a form for the Contact page that submits data to Airtable  
 - [ ] add a page to feature CodePen projects    
-- [ ] add markdown to the "description" Gallery field, and render with [react-markdown](https://github.com/rexxars/react-markdown)    
+- [x] add markdown to the "description" Gallery field, and render with [react-markdown](https://github.com/rexxars/react-markdown)   
+- [ ] optimize images so they load faster  
 - [ ] do an accessibility pass to make sure I meet basic standards  
 
 *bugs to fix*
@@ -79,14 +82,15 @@ In this section, I'll try to keep track of where I get ideas & code snippets fro
 
 #### JavaScript
 
-- Some bits of code that helped create the 3 column masonry-style layout for my gallery: [Jesse Korzan](https://github.com/jessekorzan/masonry-css-js)
+- nothing yet
 
 #### React Components
 
 - Super easy placeholder text for prototyping: [DummyJS](https://dummyjs.com/)
 - Making stuff look like it's loading while it's loading: [LazyLoad](https://github.com/twobin/react-lazyload)
 - FontAwesome icons for React: [FortAwesome/react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
-- Making it easy to write a lot of content in markdown and then parsing it to react/html: [React Markdown](https://github.com/rexxars/react-markdown)
+- Making it easy to write a lot of content in markdown and then parsing it to react/html: [React Markdown](https://github.com/rexxars/react-markdown)  
+- Masonry style layout: [React Masonry CSS](https://www.npmjs.com/package/react-masonry-css)
 
 #### Useful tutorials & other resources that I depend on
 

@@ -48,14 +48,16 @@
     
     .button-close {
       margin-bottom: 2em;
-    }
-  
-  
+    }  
   
 }
   
   p {
     padding: 0.5rem;
+  }
+  
+  a {
+    color: $dark-lavendar;
   }
  
 }
@@ -132,7 +134,7 @@
   }
   
   .tab-content {
-
+ display: block;
   background-color: rgba($purple-shadow, 0.1);
     padding: 1rem;
   width:100%;
@@ -193,7 +195,7 @@ input[type="radio"]:checked + label + .tab-content {
 }
 
 div[data-visibility=off]{
-  display: none;
+ // display: none;
  visibility:hidden;
 }
 

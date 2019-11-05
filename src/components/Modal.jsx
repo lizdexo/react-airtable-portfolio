@@ -1,36 +1,17 @@
 import React, { Component } from "react";
-import { Card, CloseButton } from "./Library.jsx";
-import Airtable from "airtable";
-import LoremIpsum from "./Placeholder.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-  useHistory,
-  useLocation,
-  useParams,
-  withRouter
-} from "react-router-dom";
+import LazyLoad from "react-lazyload";
+import { LittleSpinner } from "./Placeholder.jsx";
+import ReactMarkdown from 'react-markdown';
 
-const base = new Airtable({ apiKey: "key9O0ifLQ0zYDQIt" }).base(
-  "appzdAcwHN5xEQO8y"
-);
+
+
 
 class GalleryModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalContent: [
-        "none", //0
-        this.props.title, //1
-        this.props.description, //2
-        this.props.pics, //3
-        this.props.skilltags, //4
-        this.props.softwaretags //5
-      ],
+     
       currentID: "",
       id: this.props.recordID,
       title: this.props.title,
@@ -50,9 +31,18 @@ class GalleryModal extends Component {
   async componentDidMount(props) {
     let paramID = this.props.match.params;
     let thisRecord = paramID.recordID;
+    
+    const apiKey = process.env.REACT_APP_AIRTABLE_API_KEY;
+    const baseID = process.env.REACT_APP_API_AIRTABLE_BASE_ID;
+    
     const fetchURL =
-      "https://api.airtable.com/v0/appzdAcwHN5xEQO8y/Portfolio/" + thisRecord;
-
+      "https://api.airtable.com/v0/"+ baseID + "/Portfolio/" + thisRecord;
+    
+    const auth = "Bearer " + apiKey;    
+    const header = new Headers({
+  'Content-Type': "application/json",
+  'Authorization': auth
+});
 
     if (this.props.title !== undefined) {
       console.log("got props from parent for:", this.props.title);
@@ -62,10 +52,7 @@ class GalleryModal extends Component {
       const response = await fetch(fetchURL, {
         method: "GET",
         withCredentials: true,
-        headers: {
-          Authorization: "Bearer key9O0ifLQ0zYDQIt",
-          "Content-Type": "application/json"
-        }
+        headers: header
       });
 
       const record = await response.json();
@@ -75,7 +62,7 @@ class GalleryModal extends Component {
         thisRecord,
         record.fields["Name"],
         record.fields["Description"],
-        record.fields["Attachments"],
+        record.fields["Images"],
         record.fields["Tags"],
         record.fields["Software"]
       );
@@ -100,9 +87,6 @@ class GalleryModal extends Component {
     }
   };
 
-  componentDidUpdate = (prevProps, prevState) => {
-    console.log(this.state.title);
-  };
 
   handleBack = e => {
     if (this.props.title !== undefined) {
@@ -125,13 +109,13 @@ class GalleryModal extends Component {
               <FontAwesomeIcon icon="times" />
             </button>
           </header>
-
-          <p>{this.state.description}</p>
-
+               <ReactMarkdown linkTarget="_blank">
+         {this.state.description}
+          </ReactMarkdown>
           <dl className="tags">
             <dt>Tags</dt>
             {this.state.skills.length > 0 ? (
-              this.state.skills.map((tag, index) => <dd>{tag}</dd>)
+              this.state.skills.map((tag, index) => <dd key={index}>{tag}</dd>)
             ) : (
               <dd>oops, something broke</dd>
             )}
@@ -139,7 +123,7 @@ class GalleryModal extends Component {
             <dt>Software</dt>
 
             {this.state.software.length > 0 ? (
-              this.state.software.map((software, index) => <dd>{software}</dd>)
+              this.state.software.map((software, index) => <dd key={index}>{software}</dd>)
             ) : (
               <dd>oops, something broke</dd>
             )}
@@ -155,8 +139,10 @@ class GalleryModal extends Component {
                 value={this.state.pics[0].filename}
                 defaultChecked={true}
               />
-              <label for="defaulttab" className="thumbnail-tab">
-                <img className="thumbnail-image" src={this.state.pics[0].url} />
+              <label htmlFor="defaulttab" className="thumbnail-tab">
+              
+                <img className="thumbnail-image" src={this.state.pics[0].url} alt={this.state.pics[0].filename} />
+              
               </label>
 
               <div
@@ -164,10 +150,13 @@ class GalleryModal extends Component {
                 data-tab="default"
                 data-visibility="off"
               >
-                <img className="tab-content-pic" src={this.state.pics[0].url} />
+                
+                <img className="tab-content-pic" src={this.state.pics[0].url} alt={"Item 0: " + this.state.pics[0].filename} />
+               
                 <a
                   href={this.state.pics[0].url}
                   target="_blank"
+                  rel="noopener noreferrer"
                   data-link="internal"
                 >
                   view even larger
@@ -177,32 +166,37 @@ class GalleryModal extends Component {
 
             {this.state.pics.length > 0 ? (
               this.state.pics.map((pic, index) => (
-                <div className="tab-container" data-tab={"tab" + index}>
+                <div className="tab-container" data-tab={"tab" + index} key={pic.id}>
                   <input
                     type="radio"
                     name="item"
+                    alt={"Item " + index + ": " + pic.filename} 
                     id={pic.id}
                     data-tab={"tab" + index}
                     value={pic.filename}
                   />
-                  <label for={pic.id} className="thumbnail-tab">
-                    <img className="thumbnail-image" src={pic.url} />
+                  <label htmlFor={pic.id} className="thumbnail-tab">
+                    
+                    <img className="thumbnail-image" src={pic.url} alt={"Item " + index + ": " + pic.filename} />
+               
                   </label>
 
                   <div
-                    class="tab-content"
+                    className="tab-content"
                     data-tab={"tab" + index}
                     data-visibility="off"
                   >
-                    <img className="tab-content-pic" src={pic.url} />
-                    <a href={pic.url} target="_blank" data-link="internal">
+                    
+                    <img className="tab-content-pic" src={pic.url} alt={pic.filename} />
+              
+                    <a href={pic.url} target="_blank" rel="noopener noreferrer" data-link="internal">
                       view even larger
                     </a>
                   </div>
                 </div>
               ))
             ) : (
-              <p>None</p>
+              <LittleSpinner />
             )}
 
             <div className="image-holder" data-placeholder="gallery"></div>

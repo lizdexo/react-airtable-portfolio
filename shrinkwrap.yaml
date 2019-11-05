@@ -12,6 +12,7 @@ dependencies:
   react-dom: 16.8.6
   react-lazyload: 2.6.2
   react-markdown: 4.2.2
+  react-masonry-css: 1.0.14
   react-router-dom: 5.1.2
   react-scripts: 3.0.1
 packages:
@@ -9570,6 +9571,12 @@ packages:
       react: ^15.0.0 || ^16.0.0
     resolution:
       integrity: sha512-/STJiRFmJuAIUdeBPp/VyO5bcenTIqP3LXuC3gYvregmYGKjnszGiFc2Ph0LsWC17Un3y/CT8TfxnwJT7v9EJw==
+  /react-masonry-css/1.0.14:
+    dev: false
+    peerDependencies:
+      react: ^16.0.0
+    resolution:
+      integrity: sha512-oAPVOCMApTT0HkxZJy84yU1EWaaQNZnJE0DjDMy/L+LxZoJEph4RRXsT9ppPKbFSo/tCzj+cCLwiBHjZmZ2eXA==
   /react-router-dom/5.1.2:
     dependencies:
       '@babel/runtime': 7.6.3
@@ -12168,5 +12175,6 @@ specifiers:
   react-dom: ^16.8.6
   react-lazyload: ^2.6.2
   react-markdown: ^4.2.2
+  react-masonry-css: ^1.0.14
   react-router-dom: ^5.1.2
   react-scripts: ^3.0.1

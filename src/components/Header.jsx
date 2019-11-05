@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-import Nav from './Nav.jsx'
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
   NavLink
 } from "react-router-dom";
 
