@@ -27,14 +27,16 @@ body {
 
 a {
   color: $softblue;
-  
+
 }
 
 
 a:not([data-link=internal]) {
+   // mix-blend-mode: darken;
     line-height: 1.2;
     padding: 0 0.05rem;
     white-space: nowrap;
+
   
   &:hover {
     display: inline-block;
@@ -44,6 +46,8 @@ a:not([data-link=internal]) {
   }  
 }
   
+
+
   
 
 

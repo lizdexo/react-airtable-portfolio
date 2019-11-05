@@ -12,7 +12,7 @@ class Home extends Component {
       <article>
         <h2>Hi there!</h2>
         <h3>This site is under construction</h3>
-        
+    
        <p>Skip to the <Link to="/Gallery">Gallery</Link> to see my portfolio stuff</p>
        
       </article>

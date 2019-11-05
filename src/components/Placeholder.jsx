@@ -14,6 +14,18 @@ const Spinner = (props) => {
 }
 export {Spinner};
 
+
+const LittleSpinner = (props) => {
+  return (
+    <div className="thumbnail-tab">
+        
+     <FontAwesomeIcon icon="spinner" pulse />
+    
+  </div>
+  )
+}
+export {LittleSpinner};
+
 class SpinnerCards extends Component {
   constructor(props) {
     super(props);
@@ -25,23 +37,21 @@ class SpinnerCards extends Component {
   
   render() {
   return (
-    <>
+    <div className="placeholder-masonry">
       
       
       {this.loaderCount.map((i, index) => (
-          <div className="placeholder-card">
+      <div className="placeholder-card" key={index}>
     <div className="placeholder-card-inner">
         
-    
-    
+   
   </div>
       </div>
         ))}
  
-         
-     {/* <div className="loading-buffer"></div>*/}
+     
       
-      </>
+      </div>
   )
   };
 }

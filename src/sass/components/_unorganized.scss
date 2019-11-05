@@ -54,6 +54,9 @@ article.article {
     margin-bottom: 0.2rem;
   }
   
+   animation: fadein 0.5s $ease-bounce;
+    animation-direction: normal; 
+    animation-fill-mode: both;
   
 }
 

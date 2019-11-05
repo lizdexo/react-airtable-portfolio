@@ -1,14 +1,7 @@
 import React, { Component } from "react";
-import LazyLoad from "react-lazyload";
 import {
-  BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  NavLink,
-  useHistory,
-  useLocation,
-  useParams
+  Route
 } from "react-router-dom";
 
 import logo from "./logo.svg";
@@ -27,7 +20,7 @@ import LoremIpsum, {
 } from "./components/Placeholder.jsx";
 
 /* pages */
-import Gallery from "./components/Router2-AirtableGallery.jsx";
+import Gallery from "./components/Gallery.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Home from "./components/Home.jsx";
@@ -35,10 +28,10 @@ import Home from "./components/Home.jsx";
 /* setting up some cool icons */
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faTimes, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faSpinner, faEnvelopeSquare, faDribbbleSquare, faLinkedIn } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(fab, faTimes, faSpinner);
+library.add(fab, faTimes, faSpinner, faEnvelopeSquare);
 
 /* navigation */
 
@@ -72,7 +65,7 @@ class App extends Component {
        
     return (
       <div className="app-container">
-        <Header siteTitle="Liz Dudek">
+        <Header siteTitle="Portfolio">
           <Nav pages={route} />
         </Header>
 
@@ -97,7 +90,11 @@ class App extends Component {
             
           </section>
         </Main>
-        <Footer text="I'm gonna put some useful links here" />
+        <Footer
+          MM="10"
+          DD="31"
+          YYYY="2019"         
+          />
       </div>
     );
   }
