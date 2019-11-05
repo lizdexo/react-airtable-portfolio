@@ -65,7 +65,7 @@ class App extends Component {
        
     return (
       <div className="app-container">
-        <Header siteTitle="Portfolio">
+        <Header siteTitle="Liz Dudek">
           <Nav pages={route} />
         </Header>
 
@@ -91,8 +91,8 @@ class App extends Component {
           </section>
         </Main>
         <Footer
-          MM="10"
-          DD="31"
+          MM="11"
+          DD="05"
           YYYY="2019"         
           />
       </div>

@@ -73,4 +73,12 @@ footer {
   background-color: $footer-bgcolor;
   @include fontcolor-main;
   width: 100%;
+  
+  ul {
+    margin-bottom: 1em;
+  }
+  
+  small {
+    font-style: italic;
+  }
 }
