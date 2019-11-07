@@ -190,7 +190,7 @@ class GalleryModal extends Component {
                     <img className="tab-content-pic" src={pic.url} alt={pic.filename} />
               
                     <a href={pic.url} target="_blank" rel="noopener noreferrer" data-link="internal">
-                      view even larger
+                      <FontAwesomeIcon icon="external-link-alt" /> view even larger
                     </a>
                   </div>
                 </div>

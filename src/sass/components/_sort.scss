@@ -1,0 +1,161 @@
+.sort-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  padding: 0 0.5rem;
+  
+  header {
+    width: 100%;
+   // display: flex;
+    margin: 1em 0;
+    
+    sup {
+      font-style: italic;
+      opacity: 0;
+      text-transform: uppercase;
+      font-size: 80%;
+     
+      @include slow-transition;
+    }
+  }
+  
+
+  
+details {
+  @include noselect;
+  background-color: rgba($lavendar, 0.9);
+  padding: 0 0.5rem;
+  //padding-left: 0;
+  //width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  
+  //width: 30%;
+  @include hover;
+  
+  &[open] {
+   // width: 100%;
+     outline: none;
+    @include smooth-transition;
+    
+    div{ 
+     display: flex;
+      flex-flow: row wrap;
+    }
+    
+    summary:focus:before, summary:active:before, summary:hover {
+      color: $pinkish !important;
+    }
+  } 
+  
+  summary{
+    padding: 0.5rem;
+    background-color: $dark-lavendar;
+    border-radius: 5px;
+    color: $purpleywhite;
+    list-style-image: none;
+    
+    &:before {
+      @include fontawesome;
+      content: "\f0b0";
+    }
+  
+  &:focus {
+    outline: none;
+  }
+  }
+  
+  summary::-webkit-details-marker {
+  background: none;
+  color: transparent;
+}
+  
+}
+  
+  
+  label {
+     
+   // min-height: 3em;
+    margin-bottom: 1em;
+    
+    &:hover {
+    @include hover;
+      
+      span{
+      background-color: $black;
+      color: $purpleywhite;
+        @include smooth-transition;
+      }
+  }
+  }
+  
+  span {
+    background-color: rgba($dark-lavendar, 0.2);
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    padding: 0.5rem;
+    
+    &:before{
+       @include fontawesome;
+      //content: "\f07b"; // closed folder
+     content: "\f7a4"; // closed lines
+      margin-right: 0.2rem; 
+      color: rgba($dark-lavendar, 0.3);
+    } 
+    
+  }
+  
+  input[type="radio"] {
+	margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 100;
+  visibility: hidden;
+}
+  
+input[type="radio"]:checked + span {
+
+   background-color: $pinkish;
+color: $black;
+  @include smooth-transition;
+  
+  &:before {
+ // content: "\f07c"; // open folder
+    content: "\f06e"; // open eye
+    color: $black;
+  }
+  
+}
+
+} 
+  
+   
+
+#allprojects {
+  &:before {
+       
+        display: none;        
+    }
+  
+  
+}
+
+#allprojects-label {
+  margin-bottom: 0;
+  width: auto;
+  white-space: nowrap;
+  
+  flex: 0 2 auto;
+  }
+  
+  
+  
+  
+  

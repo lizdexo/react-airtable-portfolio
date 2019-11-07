@@ -13,11 +13,12 @@ Build stack:
 
 ### Why React?
 
-I know that React isn't necessarily recommended for simple websites like this, but I've been needing to put together a portfolio website for a very long time and I decided this would be a perfect chance to really play around with React.
+React isn't necessarily recommended for simple websites like this, but I've been needing to put together a portfolio website for a very long time and I decided this would be a perfect chance to really play around with React.
 
-In particular, I wanted to learn how to work with the Airtable API since that is where I have been storing & organizing all of my design projects. I had originally wanted to do this project in [Gatsby](https://www.gatsbyjs.org/) (which is meant for static stuff like portfolios), but I don't know anything about GraphQL yet and I _really_ wanted to have something quick. That meant using React since I'm already familiar with the basics and I could do the type of API calls I'm used to doing.
+In particular, I wanted to learn how to work with the Airtable API since that is where I have been storing & organizing all of my design projects, and I'm most familiar with using [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) for API calls. 
 
-I also really really really love component-based development, because copy/pasting the same html a hundred times sucks.
+Once I have a chance to learn GraphQL, I'll be able to rebuilt this site with [Gatsby](https://www.gatsbyjs.org/).
+
 
 ### Up Next
 

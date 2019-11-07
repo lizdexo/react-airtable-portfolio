@@ -28,10 +28,10 @@ import Home from "./components/Home.jsx";
 /* setting up some cool icons */
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faTimes, faSpinner, faEnvelopeSquare, faDribbbleSquare, faLinkedIn } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faSpinner, faEnvelopeSquare, faDribbbleSquare, faLinkedIn, faExternalLinkAlt, faGripHorizontal, faFolder, faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(fab, faTimes, faSpinner, faEnvelopeSquare);
+library.add(fab, faTimes, faSpinner, faEnvelopeSquare, faExternalLinkAlt, faGripHorizontal, faFolder, faFolderOpen );
 
 /* navigation */
 
@@ -92,7 +92,7 @@ class App extends Component {
         </Main>
         <Footer
           MM="11"
-          DD="05"
+          DD="06"
           YYYY="2019"         
           />
       </div>
