@@ -20,7 +20,7 @@ import LoremIpsum, {
 } from "./components/Placeholder.jsx";
 
 /* pages */
-import Gallery from "./components/Gallery-wide.jsx";
+import Gallery from "./components/Gallery.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Home from "./components/Home.jsx";

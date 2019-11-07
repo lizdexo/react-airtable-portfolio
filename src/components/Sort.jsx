@@ -103,8 +103,8 @@ class Sort extends Component {
    // const countcardsArr = Array.from(countcards);
   //console.log(countcardsArr.length);
     
-   // var container = document.querySelector(".gallery-masonry");
-     var container = document.querySelector(".gallery-wide");
+    var container = document.querySelector(".gallery-masonry");
+    // var container = document.querySelector(".gallery-wide");
     var matches = container.querySelectorAll(`div[data-category="${cat}"]`);
   //  console.log(cat + matches.length);
     
