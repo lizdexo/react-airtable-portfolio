@@ -10,7 +10,7 @@
     margin: 1em 0;
     
     sup {
-      font-style: italic;
+      //font-style: italic;
       opacity: 0;
       text-transform: uppercase;
       font-size: 80%;
@@ -46,9 +46,9 @@ details {
       flex-flow: row wrap;
     }
     
-    summary:focus:before, summary:active:before, summary:hover {
-      color: $pinkish !important;
-    }
+   // summary:focus:before, summary:active:before, summary:hover {
+    //  color: $pinkish !important;
+   // }
   } 
   
   summary{
@@ -61,6 +61,12 @@ details {
     &:before {
       @include fontawesome;
       content: "\f0b0";
+    }
+    
+    &:hover {
+     
+        color: $pinkish;
+      
     }
   
   &:focus {

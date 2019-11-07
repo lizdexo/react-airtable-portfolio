@@ -68,7 +68,7 @@ class Sort extends Component {
     });
     
     header.innerHTML = category;
-    sup.style.opacity = "0.9";
+    sup.style.opacity = "0.8";
   }
   
     unfilterRecords(filter) {
@@ -76,7 +76,7 @@ class Sort extends Component {
     const cards = document.getElementsByClassName("gallery-card");
     const cardsArr = Array.from(cards);
     const header = document.getElementById("view");
-      const sup = document.getElementById("sup");
+    const sup = document.getElementById("sup");
 
     cardsArr.forEach(card => {
         card.style.display = "inherit";
@@ -92,7 +92,7 @@ class Sort extends Component {
     
     return (
       <div className="sort-container">
-        
+        <header><sup id="sup">Category</sup><h2 id="view">All projects</h2></header>
         <label htmlFor="all" className="category-tab" id="allprojects-label">
           <input
                     type="radio"
@@ -134,7 +134,7 @@ class Sort extends Component {
             
           </details>
         
-          <header><sup id="sup">Currently viewing</sup><h2 id="view">All projects</h2></header>
+          
       
       </div>
     );
