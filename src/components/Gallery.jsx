@@ -7,6 +7,7 @@ import { Spinner, SpinnerCards } from "./Placeholder.jsx";
 import Sort from "./Sort.jsx";
 import { Route, Link } from "react-router-dom";
 import Masonry from "react-masonry-css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //considering adding this: https://reacttraining.com/react-router/web/example/modal-gallery
 
 const base = new Airtable({
@@ -143,10 +144,11 @@ filterRecords(filter) {
                       src={record.fields["Cover"][0].url}
                       alt="project cover"
                     />
+                    <aside><FontAwesomeIcon icon="images" /> <b>{record.fields["Images"].length}</b></aside>
                    
                   </Link>
                   <figcaption>
-                    <small>attachments: <b>{record.fields["Images"].length}</b></small>
+                  
                     <h3>{record.fields["Name"]}</h3>
 
                     <p>
@@ -179,7 +181,7 @@ filterRecords(filter) {
                   </figcaption>
                 </figure>
 
-                <div className="primary-button">
+                <div>
                   <Link
                     to={`/gallery/${record.fields["recordID"]}`}
                     onClick={() =>
@@ -195,7 +197,7 @@ filterRecords(filter) {
                     className="view-link"
                     data-link="internal"
                   >
-                    view details &nbsp; <FontAwesomeIcon icon="book-open" />
+                    view details
                   </Link>
                 </div>
               </Card>
