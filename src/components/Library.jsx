@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Card = (props) => {
   return (
-    <div className="gallery-card" id={props.id} style={{...props.style}} >
+    <div className="gallery-card" id={props.id} style={{...props.style}} data-category={props.category}>
         
       {props.children}
     

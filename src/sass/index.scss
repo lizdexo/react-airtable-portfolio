@@ -75,6 +75,7 @@ When I eventually add a blog module, <header> and <footer> will be utilized with
 @import './components/modal.scss';
 @import './components/placeholder.scss';
 @import './components/nav.scss';
+@import './components/sort.scss';
 
 
 // Media Queries
@@ -169,6 +170,9 @@ When I eventually add a blog module, <header> and <footer> will be utilized with
     font-size: 15vmin;
   }
   
+  .sort-container details {
+    max-width: 75vw;
+  }
   
   
 }

@@ -74,3 +74,23 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
+@mixin noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin fontawesome {
+     display: inline-block;
+     font-style: normal;
+     font-variant: normal;
+     text-rendering: auto;
+     -webkit-font-smoothing: antialiased;
+     font-family: "Font Awesome 5 Free";
+     font-weight: 900;  
+}

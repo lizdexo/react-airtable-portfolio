@@ -4,6 +4,7 @@ import Airtable from "airtable";
 import GalleryModal from "./Modal.jsx";
 import LazyLoad from "react-lazyload";
 import { Spinner, SpinnerCards } from "./Placeholder.jsx";
+import Sort from "./Sort.jsx";
 import { Route, Link } from "react-router-dom";
 import Masonry from "react-masonry-css";
 //considering adding this: https://reacttraining.com/react-router/web/example/modal-gallery
@@ -20,6 +21,7 @@ class Gallery extends Component {
       recordsInit: [],
       records: [],
       showModal: false,
+      showFilter: false,
       selectedRecord: "recdjhA2dqh6P1eIC",
       content: [],
       columns: "3"
@@ -28,7 +30,7 @@ class Gallery extends Component {
 
   componentDidMount() {
     base("Portfolio")
-      .select({ view: "GalleryAPI" })
+      .select({ view: "GalleryAPI", fields: ["Name", "Description", "recordID", "Year", "Images", "Cover", "Software", "Tags", "Category"]})
       .eachPage((records, fetchNextPage) => {
         this.setState({ records: records });
 
@@ -39,6 +41,11 @@ class Gallery extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.records !== this.state.records) {
       console.log("records initially loaded");
+      
+      if (prevState.showFilter !== true) {
+      this.setState({showFilter: true});
+      }
+      
     } else {
     }
 
@@ -80,6 +87,13 @@ class Gallery extends Component {
     this.setState({ content: contentToUpdate });
   }
 
+filterRecords(filter) {
+  let category = filter;
+ const element = document.querySelectorAll(`[data-category=${category}]`);
+  console.log(element)  
+ // element.style.display = 'none';
+}
+
   render() {
     const breakpointColumnsObj = {
       default: 3,
@@ -93,6 +107,10 @@ class Gallery extends Component {
        
         {/*<LazyLoad height={200} offset={500} once>  */}
         {/*</LazyLoad>*/}
+        
+       {this.state.showFilter == true ? <Sort /> : null} 
+        
+        
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="gallery-masonry"
@@ -104,6 +122,7 @@ class Gallery extends Component {
               <Card
                 key={record.fields["recordID"]}
                 id={record.fields["recordID"]}
+                category={record.fields["Category"]}
               >
                 <figure>
                   <Link
