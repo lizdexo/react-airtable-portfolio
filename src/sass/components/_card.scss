@@ -2,7 +2,7 @@
   min-height: 20em;  
   width: 100%;
   min-width: 200px;
-  max-width: 300px;
+  //max-width: 300px;
   background-color: #fff; //lighten($pinkish, 10%); //lighten($lavendar,5%); 
   border-radius: 5px;
   box-shadow: 2px 2px 0 2px rgba(0,0,0,0.2);
@@ -14,6 +14,18 @@
   @include column;
   break-inside: avoid;
   page-break-inside: avoid;
+  
+  aside {
+    display: block;
+    text-align: right;
+    margin: 0;
+    opacity: 0.9;
+    
+    b {
+      font-weight: bold;
+     // font-size: 90%;
+    }
+  }
    
   figure {
   height: 100%;
@@ -55,7 +67,7 @@ $time-list: 20ms, 40ms, 60ms, 80ms, 100ms, 120ms;
    //cursor: pointer;
   transform: scale(1.03);
     transition: box-shadow 300ms ease, background-color 500ms ease-out;
-  background-color: lighten($pinkish, 10%);
+  //background-color: lighten($pinkish, 10%);
   color: $offblack;
   
   button {
@@ -67,10 +79,7 @@ $time-list: 20ms, 40ms, 60ms, 80ms, 100ms, 120ms;
   
 }
 
-.gallery-card:hover img:first-child {
-    filter: none;
--webkit-filter: none; 
-}
+
 
 .gallery-card img:first-child {
   border: 1px solid $purple-shadow;
@@ -80,9 +89,11 @@ $time-list: 20ms, 40ms, 60ms, 80ms, 100ms, 120ms;
   height: 20em;
   object-fit: cover;  
   
-   //filter: sepia(1) hue-rotate(200deg);
-//-webkit-filter: sepia(1) hue-rotate(210deg); 
-  
+  &:hover{
+   filter: sepia(1) hue-rotate(200deg);
+-webkit-filter: sepia(1) hue-rotate(210deg); 
+   // @include smooth-transition;
+  }
 }
 
 .gallery {
@@ -98,7 +109,36 @@ $time-list: 20ms, 40ms, 60ms, 80ms, 100ms, 120ms;
   align-items: flex-start;
 }
 
-
+.gallery-wide{
+  margin: auto;
+  width: 100%;
+  max-width: 970px;
+  
+  .gallery-card {
+    margin: 2em auto;
+   
+    h3 {
+      margin-top:0;
+    }
+    
+    /*
+    figure {
+      display: flex;
+      
+      a {
+        
+        width: 50%;
+      }
+    }
+    
+    figcaption {
+      max-width: 50%;
+      //flex: 0 0 50%;
+    }
+    */
+    
+  }
+}
 
 
 .gallery-masonry {
@@ -137,6 +177,9 @@ details {
 .tags {
   display: flex;
   @include row-wrap;
+  margin-bottom: 1em;
+  
+  
   
   dt {
     width: 100%;
@@ -153,6 +196,8 @@ details {
     background-color: $ws-cyan;
     border-radius: 30px;
   }
+  
+
   
   
 }

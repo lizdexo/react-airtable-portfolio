@@ -8,31 +8,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
       },
       {
         id: 2,
-        cat: "Logos & Branding",       
+        cat: "eLearning & Instructional Design",
       },
       {
         id: 3,
-        cat: "Print",      
+        
+         cat: "Web Design", 
       },
       {
         id: 4,
         cat: "Web Development",       
       },
       {
-        id: 5,
-        cat:  "Graphic Design",      
+        id: 5,   
+        cat: "Art & Illustration", 
       },
       {
         id: 6,
-        cat: "Art & Illustration",     
+        cat:  "Graphic Design",     
       },
       {
         id: 7,
-        cat: "eLearning & Instructional Design",      
+        cat: "Print",      
       },
        {
         id: 8,
-        cat: "Web Design",     
+        cat: "Logos & Branding", 
       },
       {
         id: 9,
@@ -49,7 +50,17 @@ class Sort extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    
+    
+      const cats = categories;
+    
+      cats.forEach(catobj => {
+        this.countCat(catobj.cat, catobj.id);  
+    });
+    
+    
+  }
 
   filterRecords(filter) {
     let category = filter;
@@ -86,13 +97,32 @@ class Sort extends Component {
       sup.style.opacity = "0";
   }
 
+  
+  countCat(cat, id){
+    //const countcards = document.getElementsByClassName("gallery-card");
+   // const countcardsArr = Array.from(countcards);
+  //console.log(countcardsArr.length);
+    
+   // var container = document.querySelector(".gallery-masonry");
+     var container = document.querySelector(".gallery-wide");
+    var matches = container.querySelectorAll(`div[data-category="${cat}"]`);
+  //  console.log(cat + matches.length);
+    
+    const lab = document.querySelector(`.cat-${id}`);
+   // console.log(lab);
+    lab.innerHTML = matches.length;
+    
+  }
+  
   render() {
     
 
     
     return (
+      <>
+        <header className="sort-header"><sup id="sup">Category</sup><h2 id="view">All projects</h2></header>
       <div className="sort-container">
-        <header><sup id="sup">Category</sup><h2 id="view">All projects</h2></header>
+        
         <label htmlFor="all" className="category-tab" id="allprojects-label">
           <input
                     type="radio"
@@ -115,18 +145,18 @@ class Sort extends Component {
           {categories.map((category, index) => (
             
          
-         <label htmlFor={"category" + index} className="category-tab">
+         <label htmlFor={"category" + category.id} className="category-tab" key={"category" + category.id}>
           <input
                     type="radio"
                     name="category"
                     alt={category.cat} 
-                    id={"category" + index}
-                    data-tab={"tab" + index}
+                    id={"category" + category.id}
+                    data-tab={"tab" + category.id}
                     value={category.cat}
                     onClick={() => this.filterRecords(category.cat)}
                   />
                                    
-            <span>{category.cat}</span>
+              <span><p>{category.cat}</p><i className={"cat-" + category.id}>()</i></span>
                
                   </label>
 
@@ -137,6 +167,7 @@ class Sort extends Component {
           
       
       </div>
+        </>
     );
   }
 }

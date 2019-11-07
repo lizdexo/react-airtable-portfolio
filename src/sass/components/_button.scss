@@ -20,6 +20,14 @@
   
 }
 
+.button-view-details {
+  a {
+    color: $dark-lavendar;
+    background-color: transparent;
+    text-align: right;
+  }
+}
+
 
 .button-close {
   
@@ -73,9 +81,11 @@
   height: 2em;
   display: flex;
   justify-content: center;
+  //justify-content: flex-end;
   align-items: center;
   border-radius: 5px;
   margin: 1rem 0 0;
+ // padding-right: 0.5rem;
   
   
   

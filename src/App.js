@@ -20,7 +20,7 @@ import LoremIpsum, {
 } from "./components/Placeholder.jsx";
 
 /* pages */
-import Gallery from "./components/Gallery.jsx";
+import Gallery from "./components/Gallery-wide.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Home from "./components/Home.jsx";
@@ -28,10 +28,10 @@ import Home from "./components/Home.jsx";
 /* setting up some cool icons */
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faTimes, faSpinner, faEnvelopeSquare, faDribbbleSquare, faLinkedIn, faExternalLinkAlt, faGripHorizontal, faFolder, faFolderOpen } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faSpinner, faEnvelopeSquare, faDribbbleSquare, faLinkedIn, faExternalLinkAlt, faGripHorizontal, faBookOpen, faExpand, faImages} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(fab, faTimes, faSpinner, faEnvelopeSquare, faExternalLinkAlt, faGripHorizontal, faFolder, faFolderOpen );
+library.add(fab, faTimes, faSpinner, faEnvelopeSquare, faExternalLinkAlt, faGripHorizontal, faBookOpen, faExpand, faImages );
 
 /* navigation */
 
