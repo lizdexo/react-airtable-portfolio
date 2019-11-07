@@ -7,6 +7,7 @@ import { Spinner, SpinnerCards } from "./Placeholder.jsx";
 import Sort from "./Sort.jsx";
 import { Route, Link } from "react-router-dom";
 import Masonry from "react-masonry-css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //considering adding this: https://reacttraining.com/react-router/web/example/modal-gallery
 
 const base = new Airtable({
@@ -103,19 +104,15 @@ filterRecords(filter) {
     };
 
     return (
-      <article>
+      <article className="gallery-wide">
        
-        {/*<LazyLoad height={200} offset={500} once>  */}
+        
         {/*</LazyLoad>*/}
         
        {this.state.showFilter == true ? <Sort /> : null} 
         
         
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="gallery-masonry"
-          columnClassName="my-masonry-grid_column"
-        >
+     <LazyLoad height={200} offset={500} once>  
           
           {this.state.records.length > 0 ? (
             this.state.records.map((record, index) => (
@@ -146,7 +143,7 @@ filterRecords(filter) {
                    
                   </Link>
                   <figcaption>
-                    <small>attachments: <b>{record.fields["Images"].length}</b></small>
+                    <aside><FontAwesomeIcon icon="images" /> <b>{record.fields["Images"].length}</b></aside>
                     <h3>{record.fields["Name"]}</h3>
 
                     <p>
@@ -179,7 +176,7 @@ filterRecords(filter) {
                   </figcaption>
                 </figure>
 
-                <div className="primary-button">
+               <div className="button-view-details">
                   <Link
                     to={`/gallery/${record.fields["recordID"]}`}
                     onClick={() =>
@@ -203,7 +200,9 @@ filterRecords(filter) {
           ) : (
             <SpinnerCards />
           )}
-        </Masonry>
+       
+        </LazyLoad>
+        
         <Route
           exact
           path="/gallery/:recordID"
