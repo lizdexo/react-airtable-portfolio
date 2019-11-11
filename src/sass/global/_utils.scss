@@ -1,9 +1,16 @@
 @mixin debug {
-  border: 1px dotted red;
+  outline: 1px dotted red !important;
+  background-color: rgba(red, 0.3) !important;
 }
 
 @mixin debug-focus {
-  background-color: yellow;
+  outline: 1px dotted orange !important;
+  background-color: rgba(yellow, 0.5) !important;
+}
+
+@mixin debug-compare {
+  outline: 1px dotted blue !important;
+  background-color: rgba(blue, 0.3) !important;
 }
 
 @mixin vh100 {

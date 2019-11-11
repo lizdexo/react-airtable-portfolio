@@ -42,7 +42,7 @@ export { CloseButton };
 
 
 
-
+/* --- Unused
 
 const omit = (obj, omitKey) =>
   Object.keys(obj).reduce((result, key) => {
@@ -113,6 +113,8 @@ export { Image }
 
 /* Full Library Demo */
 
+
+
 class Library extends Component {
   constructor(props) {
     super(props);
@@ -121,7 +123,7 @@ class Library extends Component {
     return (
       <article id="library">
        <Card></Card>
-        
+        <CloseButton />
         
       </article>
     )

@@ -88,12 +88,7 @@ class Gallery extends Component {
     this.setState({ content: contentToUpdate });
   }
 
-filterRecords(filter) {
-  let category = filter;
- const element = document.querySelectorAll(`[data-category=${category}]`);
-  console.log(element)  
- // element.style.display = 'none';
-}
+
 
   render() {
     const breakpointColumnsObj = {

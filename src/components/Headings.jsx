@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+/*--- Not used yet 
 
 class H1 extends Component {
   constructor(props) {
@@ -28,3 +29,5 @@ class H2 extends Component {
 
 
 export {H2}
+
+----*/
