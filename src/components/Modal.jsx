@@ -4,7 +4,7 @@ import LazyLoad from "react-lazyload";
 import { LittleSpinner } from "./Placeholder.jsx";
 import ReactMarkdown from 'react-markdown';
 
-
+//gonna try this: https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
 
 
 class GalleryModal extends Component {
@@ -112,6 +112,7 @@ class GalleryModal extends Component {
                <ReactMarkdown linkTarget="_blank">
          {this.state.description}
           </ReactMarkdown>
+          
           <dl className="tags">
             <dt>Tags</dt>
             {this.state.skills.length > 0 ? (
@@ -128,6 +129,7 @@ class GalleryModal extends Component {
               <dd>oops, something broke</dd>
             )}
           </dl>
+          
 
           <section className="gallery-item-tabs">
             <div className="tab-container" id="default-tab-container">

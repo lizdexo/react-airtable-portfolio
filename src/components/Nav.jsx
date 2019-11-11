@@ -15,7 +15,7 @@ class Nav extends Component {
       <nav>
         <ul>
           {this.props.pages.map((page, index, label) => (
-             <li key={index}>
+             <li key={page.id}>
         <NavLink to={page.url} activeClassName="selected" data-link="internal">
           {page.label}
         </NavLink>

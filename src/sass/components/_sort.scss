@@ -44,8 +44,13 @@ details {
    // width: 100%;
      outline: none;
     @include smooth-transition;
+   
+    span {
+       animation: height 300ms ease;
+    }
     
     div{ 
+     
      display: flex;
       flex-flow: row wrap;
     }
@@ -98,11 +103,19 @@ details {
       background-color: $black;
       color: $purpleywhite;
         @include smooth-transition;
+        
+        
+         &:before {
+ 
+    content: "\f06e"; // open eye
+    color: $pinkish;
+  }
       }
   }
   }
   
   span {
+     
     background-color: rgba($dark-lavendar, 0.2);
     display: flex;
     justify-content: flex-start;
@@ -167,7 +180,7 @@ details {
   
 input[type="radio"]:checked + span {
 
-   background-color: $pinkish;
+background-color: $pinkish;
 color: $black;
   @include smooth-transition;
   

@@ -1,17 +1,4 @@
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
 
 @keyframes appear{
@@ -74,6 +61,21 @@
     opacity: 1;
   }
 
+}
+
+@keyframes height {
+  
+  0% {
+   opacity: 0;
+    height: 0;
+  }
+  
+  100% {
+   opacity: 1;
+    height: 100%;
+  }
+  
+  
 }
 
 
