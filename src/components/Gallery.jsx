@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Card } from "./Library.jsx";
 import Airtable from "airtable";
-import GalleryModal from "./Modal.jsx";
+import GalleryModal from "./Modal2.jsx";
 import LazyLoad from "react-lazyload";
 import { Spinner, SpinnerCards } from "./Placeholder.jsx";
 import Sort from "./Sort.jsx";
