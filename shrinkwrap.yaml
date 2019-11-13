@@ -10,11 +10,15 @@ dependencies:
   node-sass: 4.12.0
   react: 16.8.6
   react-dom: 16.8.6
+  react-image-gallery: 0.9.1
   react-lazyload: 2.6.2
   react-markdown: 4.2.2
   react-masonry-css: 1.0.14
+  react-responsive-carousel: 3.1.51
   react-router-dom: 5.1.2
   react-scripts: 3.0.1
+  react-slick: 0.25.2
+  slick-carousel: 1.8.1
 packages:
   /@babel/code-frame/7.0.0:
     dependencies:
@@ -3328,6 +3332,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg==
+  /classnames/2.2.6:
+    dev: false
+    resolution:
+      integrity: sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
   /clean-css/4.2.1:
     dependencies:
       source-map: 0.6.1
@@ -4374,6 +4382,10 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-F/7vkyTtyc/llOIn8oWclcB25KdRaiPBpZYDgJHgh/UHtpgT2p2eldQgtQnLtUvfMKPKxbRaQM/hHkvLHt1Vng==
+  /enquire.js/2.1.6:
+    dev: false
+    resolution:
+      integrity: sha1-PoeAybi4NQhMP2DhZtvDwqPImBQ=
   /entities/1.1.2:
     dev: false
     resolution:
@@ -7039,6 +7051,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
+  /json2mq/0.2.0:
+    dependencies:
+      string-convert: 0.2.1
+    dev: false
+    resolution:
+      integrity: sha1-tje9O6nqvhIsg+lyBIOusQ0skEo=
   /json3/3.3.2:
     dev: false
     resolution:
@@ -7272,6 +7290,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
+  /lodash.debounce/4.0.8:
+    dev: false
+    resolution:
+      integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=
   /lodash.memoize/4.1.2:
     dev: false
     resolution:
@@ -7297,6 +7319,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-K01OlbpEDZFf8IvImeRVNmZxMxY=
+  /lodash.throttle/4.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
   /lodash.unescape/4.0.1:
     dev: false
     resolution:
@@ -9533,10 +9559,30 @@ packages:
       react: ^16.0.0
     resolution:
       integrity: sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
+  /react-easy-swipe/0.0.16:
+    dependencies:
+      prop-types: 15.7.2
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha1-Wj2Umo+XXQW+kqgYJUMV0TGKgeo=
   /react-error-overlay/5.1.6:
     dev: false
     resolution:
       integrity: sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
+  /react-image-gallery/0.9.1:
+    dependencies:
+      lodash.debounce: 4.0.8
+      lodash.throttle: 4.1.1
+      prop-types: 15.7.2
+      react-swipeable: 5.4.0
+      resize-observer-polyfill: 1.5.1
+    dev: false
+    peerDependencies:
+      react: ^16.0.0
+    resolution:
+      integrity: sha512-J0ZDp12QwcHxK/De//Cx0lXvkPk2bL2voNm6xmZItCZ5TWTKJyNAa9U/iOtfi/RKJEpSLsTb2kP/4Lr5wgkJZA==
   /react-is/16.10.2:
     dev: false
     resolution:
@@ -9577,6 +9623,16 @@ packages:
       react: ^16.0.0
     resolution:
       integrity: sha512-oAPVOCMApTT0HkxZJy84yU1EWaaQNZnJE0DjDMy/L+LxZoJEph4RRXsT9ppPKbFSo/tCzj+cCLwiBHjZmZ2eXA==
+  /react-responsive-carousel/3.1.51:
+    dependencies:
+      classnames: 2.2.6
+      prop-types: 15.7.2
+      react-easy-swipe: 0.0.16
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-hb74s8Cj9g3ppNxQeDwsIekTp2EOFO2MdmYXKIqjFS3oMHQE9Fg1lKn4j5tiIhAQAKQlNgy6hfqeS2aIO/Sicg==
   /react-router-dom/5.1.2:
     dependencies:
       '@babel/runtime': 7.6.3
@@ -9670,6 +9726,27 @@ packages:
       fsevents: 2.0.6
     resolution:
       integrity: sha512-LKEjBhVpEB+c312NeJhzF+NATxF7JkHNr5GhtwMeRS1cMeLElMeIu8Ye7WGHtDP7iz7ra4ryy48Zpo6G/cwWUw==
+  /react-slick/0.25.2:
+    dependencies:
+      classnames: 2.2.6
+      enquire.js: 2.1.6
+      json2mq: 0.2.0
+      lodash.debounce: 4.0.8
+      resize-observer-polyfill: 1.5.1
+    dev: false
+    peerDependencies:
+      react: ^0.14.0 || ^15.0.1 || ^16.0.0
+      react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0
+    resolution:
+      integrity: sha512-8MNH/NFX/R7zF6W/w+FS5VXNyDusF+XDW1OU0SzODEU7wqYB+ZTGAiNJ++zVNAVqCAHdyCybScaUB+FCZOmBBw==
+  /react-swipeable/5.4.0:
+    dependencies:
+      prop-types: 15.7.2
+    dev: false
+    peerDependencies:
+      react: ^16.0.0-0
+    resolution:
+      integrity: sha512-TUbldupF3cxMF+pBWfz24TlQa23K4CecqQ8EA+onxEiAg+UEPSJ5IousOjMm0IVBYz62KX1klHL8p7SGSR3CiQ==
   /react/16.8.6:
     dependencies:
       loose-envify: 1.4.0
@@ -10026,6 +10103,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+  /resize-observer-polyfill/1.5.1:
+    dev: false
+    resolution:
+      integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
   /resolve-cwd/2.0.0:
     dependencies:
       resolve-from: 3.0.0
@@ -10491,6 +10572,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-Qu+VC3EwYLldKa1fCxuuvULvSJOKEgk9pi8dZeCVK7TqBfUNTH4sFkk4joj8afVSfAYgJoSOetjx9QWOJ5mYoQ==
+  /slick-carousel/1.8.1:
+    dev: false
+    peerDependencies:
+      jquery: '>=1.8.0'
+    resolution:
+      integrity: sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
   /snapdragon-node/2.1.1:
     dependencies:
       define-property: 1.0.0
@@ -10747,6 +10834,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-1cdSgl5TZ+eG944Y5EXqIjoVWVI=
+  /string-convert/0.2.1:
+    dev: false
+    resolution:
+      integrity: sha1-aYLMMEn7tM2F+LJFaLnZvznu/5c=
   /string-length/2.0.0:
     dependencies:
       astral-regex: 1.0.0
@@ -12173,8 +12264,12 @@ specifiers:
   node-sass: ^4.12.0
   react: ^16.8.6
   react-dom: ^16.8.6
+  react-image-gallery: ^0.9.1
   react-lazyload: ^2.6.2
   react-markdown: ^4.2.2
   react-masonry-css: ^1.0.14
+  react-responsive-carousel: ^3.1.51
   react-router-dom: ^5.1.2
   react-scripts: ^3.0.1
+  react-slick: ^0.25.1
+  slick-carousel: ^1.8.1

@@ -75,6 +75,8 @@ class Sort extends Component {
 
     header.innerHTML = category;
     filterHeader.innerHTML = "Filtered";
+    filterHeader.style.backgroundColor = "#E2BBFF";
+    filterHeader.style.color = "#111111";
     sup.style.opacity = "0.8";
     
     document.getElementById("category-list").open = false;
@@ -94,6 +96,8 @@ class Sort extends Component {
     });
     header.innerHTML = "All Projects";
     filterHeader.innerHTML = "Filter by Category";//need to refactor to dangerouslysetInnerHTML
+     filterHeader.style.backgroundColor = "rgba(102, 102, 255, 0.5)";
+    filterHeader.style.color = "#FFFBFF";
     sup.style.opacity = "0";
   }
 
