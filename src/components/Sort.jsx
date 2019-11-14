@@ -99,6 +99,9 @@ class Sort extends Component {
      filterHeader.style.backgroundColor = "rgba(102, 102, 255, 0.5)";
     filterHeader.style.color = "#FFFBFF";
     sup.style.opacity = "0";
+    
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
   countCat(cat, id) {

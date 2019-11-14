@@ -94,3 +94,6 @@ Here are the Glitch projects that helped me figure stuff out:
 
 - [airtable-example](https://glitch.com/~airtable-example)
 - [starter-react-template](https://glitch.com/~starter-react-template)
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d542ec44-94b5-4fe2-b61d-f2909adf8e75/deploy-status)](https://app.netlify.com/sites/quirky-curie-d765f6/deploys)

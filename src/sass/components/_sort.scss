@@ -20,14 +20,15 @@
   flex-flow: row nowrap;
   align-items: flex-start;
   padding: 0;
-  
-  
-  
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background-color: rgba($lavendar, 0.9);
 
   
 details {
   @include noselect;
-  background-color: rgba($lavendar, 0.9);
+  //background-color: rgba($lavendar, 0.9);
   padding: 0 0.5rem;
   //padding-left: 0;
   //width: 100%;

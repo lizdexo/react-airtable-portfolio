@@ -135,10 +135,12 @@ class Gallery extends Component {
                     }
                     data-link="internal"
                   >
+                    <LazyLoad height={325} offset={200}> 
                     <img
                       src={record.fields["Cover"][0].url}
                       alt="project cover"
                     />
+                    </LazyLoad>
                     <aside><FontAwesomeIcon icon="images" /> <b>{record.fields["Images"].length}</b></aside>
                    
                   </Link>
