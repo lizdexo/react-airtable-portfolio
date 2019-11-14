@@ -88,6 +88,11 @@ class Gallery extends Component {
     this.setState({ content: contentToUpdate });
   }
 
+topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 
 
   render() {
@@ -218,6 +223,8 @@ class Gallery extends Component {
             />
           )}
         />
+        
+        <button className="view-link" id="backtop" onClick={() => this.topFunction()}>back to top</button>
       </article>
     );
   }
