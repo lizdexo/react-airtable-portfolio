@@ -59,7 +59,6 @@ const route = [
 
 class App extends Component {
 
- 
   
   render() {
        
@@ -90,6 +89,7 @@ class App extends Component {
             
           </section>
         </Main>
+        
         <Footer
           MM="11"
           DD="12"

@@ -85,7 +85,8 @@
   align-items: center;
   border-radius: 5px;
   margin: 1rem 0 0;
- // padding-right: 0.5rem;
+  border: none;
+ padding: 0 1rem;
   
   color: $purpleywhite;
   
@@ -103,4 +104,14 @@
  // @include debug;
 }
 
-
+#backtop {
+  background-color: $softblue;
+  color: $black;
+  float: right;
+  
+  &:hover {
+    color: $purpleywhite;
+    background-color: $black;
+  }
+  
+}

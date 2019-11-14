@@ -74,7 +74,7 @@ class Sort extends Component {
     });
 
     header.innerHTML = category;
-    filterHeader.innerHTML = "Filtered";
+    filterHeader.innerHTML = category;
     filterHeader.style.backgroundColor = "#E2BBFF";
     filterHeader.style.color = "#111111";
     sup.style.opacity = "0.8";
