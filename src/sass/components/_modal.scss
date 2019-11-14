@@ -9,7 +9,7 @@
   opacity: 0;
   overflow-y: scroll;  
   animation: appear 200ms ease forwards;
-  
+  z-index: 600;
   
   button:active {
   animation: appear 200ms ease reverse forwards;
@@ -31,8 +31,11 @@
   @include column;
   justify-content: center;
   border-radius: 5px;
-  @include layout-padding;
   position: relative;
+  
+  section {
+    @include layout-padding;
+  }
   
   header {
  // @include debug;
@@ -40,6 +43,7 @@
   flex-flow: row nowrap;
    justify-content: space-between;
   align-items: center;
+    
   
   h3 { 
     font-size: 2em;
@@ -47,7 +51,7 @@
   }
     
     .button-close {
-      margin-bottom: 2em;
+      margin-bottom: auto;
     }  
   
 }
@@ -234,6 +238,7 @@ input[type="radio"]:checked + label {
 }
 
 ///===============================Carousel Version============
+/// It's messy and full of overrides
 
 .modal-carousel {
   display: flex;
@@ -241,7 +246,7 @@ input[type="radio"]:checked + label {
   width: 100%;
   
   .carousel-slider {
-    order: 2;
+    //order: 2;
   }
   
  .carousel .slide {
@@ -250,6 +255,7 @@ input[type="radio"]:checked + label {
     position: relative;
     text-align: center;
     background: rgba($purple-shadow, 0.1);
+   
 } 
   
   .carousel-inner {
@@ -258,7 +264,7 @@ input[type="radio"]:checked + label {
   
   .carousel-content-pic {
     object-fit: scale-down;
-    max-height: 90vh;
+    max-height: 80vh;
   }
   
   
@@ -282,8 +288,8 @@ input[type="radio"]:checked + label {
     background-color: rgba($lavendar, 0.2);
     
     .thumbs-wrapper {
-      display: flex;
-      flex-flow: row wrap;
+      //display: flex;
+     // flex-flow: row wrap;
       width: 100%;
       
      
@@ -291,7 +297,7 @@ input[type="radio"]:checked + label {
     }
     
     img {
-        width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
@@ -313,11 +319,11 @@ input[type="radio"]:checked + label {
     border: 3px solid $lavendar;
  // transform: scale(1.1);
    @include smooth-transition;
-  z-index: 500;
+    //z-index: 500;
     
     img {
        filter: sepia(1) hue-rotate(200deg);
--webkit-filter: sepia(1) hue-rotate(210deg); 
+    -webkit-filter: sepia(1) hue-rotate(210deg); 
     @include smooth-transition;
     }
     

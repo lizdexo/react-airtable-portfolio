@@ -110,6 +110,7 @@ class GalleryModal extends Component {
     return (
       <div className="modal-container" onClick={this.handleBack}>
         <article id="modal" onClick={event => event.stopPropagation()}>
+          <section>
           <header>
             <h3>{this.state.title}</h3>
             <button className="button-close" onClick={this.handleBack}>
@@ -136,6 +137,7 @@ class GalleryModal extends Component {
               <dd>oops, something broke</dd>
             )}
           </dl>
+            </section>
           
           <Carousel
             infiniteLoop="true"
