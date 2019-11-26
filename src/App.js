@@ -69,7 +69,7 @@ class App extends Component {
         </Header>
 
         <Main>
-          <section className="main-inner">
+          <div className="main-inner">
             
        
            <Switch>
@@ -87,12 +87,12 @@ class App extends Component {
               </Route>   
            </Switch>
             
-          </section>
+          </div>
         </Main>
         
         <Footer
           MM="11"
-          DD="12"
+          DD="25"
           YYYY="2019"         
           />
       </div>
