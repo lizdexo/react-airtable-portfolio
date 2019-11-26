@@ -86,9 +86,9 @@ SwipeObserver = null;
 }
 
     
-    this.SwipeObserver = new IntersectionObserver(this.lockSwipe, options);
+   // this.SwipeObserver = new IntersectionObserver(this.lockSwipe, options);
 
-    this.SwipeObserver.observe(document.querySelector("#swipe-buffer"));
+   // this.SwipeObserver.observe(document.querySelector("#swipe-buffer"));
   
     
   }
@@ -179,6 +179,8 @@ lockSwipe = entries => {
             showIndicators={false}
             swipeable={false}
             dynamicHeight={false}
+            axis="horizontal" 
+            transitionTime={0}
             >
             
            {this.state.pics.length > 0 ? (

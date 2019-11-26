@@ -156,7 +156,7 @@ unBreakColumns = (cols) => {
                     }
                     data-link="internal"
                   >
-                    <LazyLoad height={325} offset={200}> 
+                    <LazyLoad height={325} offset={400}> 
                     <img
                       src={record.fields["Cover"][0].url}
                       alt="project cover"

@@ -245,6 +245,46 @@ input[type="radio"]:checked + label {
   flex-flow: column nowrap;
   width: 100%;
   
+  &:after {
+    position: absolute;
+    right:-2em;
+    width: 2em;
+    content: "___";
+    background-color: transparent;
+    height: 100%;
+    max-height: calc(60vh + 2rem);
+  }
+  
+   &:before {
+    position: absolute;
+    left:-2em;
+    width: 2em;
+    content: "___";
+    background-color: transparent;
+    height: 100%;
+    max-height: calc(60vh + 2rem);
+  }
+  
+ 
+  
+  .carousel.carousel-slider .control-arrow {
+    background-color: $lavendar;
+    
+    &:hover, &:focus, &:active {
+      background-color: $lavendar !important;
+      opacity: 0.5 !important;
+      -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  
+
+}
+  
   .carousel-slider {
     //order: 2;
   }
@@ -267,6 +307,11 @@ input[type="radio"]:checked + label {
     max-height: 60vh;
   }
   
+  .carousel .thumbs {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
   
   .thumb {
     
@@ -287,14 +332,7 @@ input[type="radio"]:checked + label {
   flex: 0 1 auto;  
     background-color: rgba($lavendar, 0.2);
     
-    .thumbs-wrapper {
-      //display: flex;
-     // flex-flow: row wrap;
-      width: 100%;
-      
-     
-      
-    }
+  
     
     img {
     width: 100%;
