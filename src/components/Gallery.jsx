@@ -8,7 +8,13 @@ import Sort from "./Sort.jsx";
 import { Route, Link } from "react-router-dom";
 import Masonry from "react-masonry-css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks
+} from "body-scroll-lock";
 //considering adding this: https://reacttraining.com/react-router/web/example/modal-gallery
+import ScrollLock from 'react-scroll-lock-component';
 
 const base = new Airtable({
   apiKey: process.env.REACT_APP_AIRTABLE_API_KEY
@@ -25,10 +31,12 @@ class Gallery extends Component {
       showFilter: false,
       selectedRecord: "recdjhA2dqh6P1eIC",
       content: [],
-      columns: "3"
+      columns: 3
     };
   }
 
+  
+  
   componentDidMount() {
     base("Portfolio")
       .select({ view: "GalleryAPI", fields: ["Name", "Description", "recordID", "Year", "Images", "Cover", "Software", "Tags", "Category"]})
@@ -37,6 +45,8 @@ class Gallery extends Component {
 
         fetchNextPage();
       });
+    
+   
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -58,6 +68,7 @@ class Gallery extends Component {
   }
 
   handleShow = (record, name, desc, attachments, skilltags, softwaretags) => {
+      
     this.setState({ selectedRecord: record });
 
     const id = record;
@@ -93,23 +104,28 @@ topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+unBreakColumns = (cols) => {
+  console.log(cols);
+  this.setState({columns: cols})
+}
+
 
 
   render() {
     const breakpointColumnsObj = {
-      default: 3,
-      1100: 3,
+      default: this.state.columns,
+      1100: this.state.columns,
       900: 2,
       700: 1
     };
 
     return (
       <article>
-       
+       <h1>Gallery</h1>
         {/*<LazyLoad height={200} offset={500} once>  */}
         {/*</LazyLoad>*/}
         
-       {this.state.showFilter == true ? <Sort /> : null} 
+       {this.state.showFilter == true ? <Sort onFilter={this.unBreakColumns} /> : null} 
         
         
         <Masonry
@@ -208,10 +224,12 @@ topFunction() {
             <SpinnerCards />
           )}
         </Masonry>
+        
         <Route
           exact
           path="/gallery/:recordID"
           render={props => (
+            <ScrollLock>
             <GalleryModal
               {...props}
               recordID={this.state.selectedRecord}
@@ -221,6 +239,7 @@ topFunction() {
               skilltags={this.state.content[3]}
               softwaretags={this.state.content[4]}
             />
+           </ScrollLock>
           )}
         />
         
@@ -232,3 +251,4 @@ topFunction() {
 
 
 export default Gallery;
+

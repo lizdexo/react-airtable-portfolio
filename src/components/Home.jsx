@@ -10,11 +10,13 @@ class Home extends Component {
   render() {
     return (
       <article>
-        <h2>Hi there!</h2>
-        <h3>This site is under construction</h3>
+        <h1>Hi there!</h1>
+       
+        <section className="content">  
+        <h2>This site is under construction</h2>
     
        <p>Skip to the <Link to="/Gallery">Gallery</Link> to see my portfolio stuff</p>
-       
+        </section>
       </article>
     )
   }

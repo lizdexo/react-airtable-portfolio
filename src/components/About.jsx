@@ -20,6 +20,7 @@ class About extends Component {
   render() {
     return (
       <article>
+        <h1>About</h1>
              
         <section className="content">
           <h2>About Me</h2>

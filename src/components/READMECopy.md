@@ -80,7 +80,8 @@ In this section, I'll try to keep track of where I get ideas & code snippets fro
 - Making stuff look like it's loading while it's loading: [LazyLoad](https://github.com/twobin/react-lazyload)
 - FontAwesome icons for React: [FortAwesome/react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
 - Making it easy to write a lot of content in markdown and then parsing it to react/html: [React Markdown](https://github.com/rexxars/react-markdown)  
-- Masonry style layout: [React Masonry CSS](https://www.npmjs.com/package/react-masonry-css)
+- Masonry style layout: [React Masonry CSS](https://www.npmjs.com/package/react-masonry-css)  
+- Controlling scroll for a modal: [react-scroll-lock-component](https://github.com/orteth01/react-scroll-lock-component)  
 
 #### Useful tutorials & other resources that I depend on
 
