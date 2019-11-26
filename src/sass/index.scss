@@ -85,6 +85,11 @@ When I eventually add a blog module, <header> and <footer> will be utilized with
 
 
 @media only screen and (max-width: 970px) {
+  
+  h1 {
+    color: $purpleywhite;
+  }
+  
   .gallery {
     justify-content: flex-end;
   }
