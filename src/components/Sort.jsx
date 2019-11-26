@@ -106,7 +106,7 @@ class Sort extends Component {
     });
 
     this.tidyUp();
-    this.triggerUnbreakColumns(1);
+    //this.triggerUnbreakColumns(1);
     this.setFilterStyles(category, category, "#E2BBFF", "#111111", "0.8");
   };
 
@@ -121,7 +121,7 @@ class Sort extends Component {
     });
 
     this.tidyUp();
-    this.triggerUnbreakColumns(3);
+    //this.triggerUnbreakColumns(3);
     this.setFilterStyles(
       "All Projects",
       "Filter by Category",
@@ -142,7 +142,7 @@ tidyUp() {
   }
 
  triggerUnbreakColumns = cols => {
-    this.props.onFilter(cols);
+    //this.props.onFilter(cols);
   };
 
   setFilterStyles(headerText, filterText, bgColor, fontColor, supOpacity) {
