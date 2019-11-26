@@ -132,8 +132,12 @@ class Sort extends Component {
   }
 
 tidyUp() {
+  
+  if (this.state.isScrollLockEnabled == true ) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+  }
+  
     document.getElementById("category-list").open = false;
   }
 

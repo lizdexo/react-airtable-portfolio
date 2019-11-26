@@ -285,6 +285,7 @@ input[type="radio"]:checked + label {
     cursor: pointer;
     border-radius: 5px;
     background-color: $pinkish;
+    color: $black !important;
 }
   
   
@@ -308,13 +309,20 @@ input[type="radio"]:checked + label {
 
 }
   
+  .carousel .control-next.control-arrow:before {
+    //border-left: 8px solid $black;
+}
+  
+  .carousel .control-prev.control-arrow:before {
+    //border-right: 8px solid $black;
+}
 
   
 
   
   .carousel .control-next.control-arrow {
     right: -1rem;
-    opacity: 1;
+   
 }
   
   .carousel .control-prev.control-arrow {
