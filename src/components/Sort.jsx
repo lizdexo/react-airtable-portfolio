@@ -165,7 +165,7 @@ tidyUp() {
   render() {
     return (
       <>
-            <sup id="sup">(Filtered)</sup>
+            <sup id="sup" onClick={() => this.unfilterRecords()}>(Filtered)</sup>
         <section className="content">
       
           <h2 id="view">All projects</h2>
