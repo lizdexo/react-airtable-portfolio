@@ -121,7 +121,9 @@ unBreakColumns = (cols) => {
 
     return (
       <article>
+        <section className="intro">
        <h1>Gallery</h1>
+          </section>
         {/*<LazyLoad height={200} offset={500} once>  */}
         {/*</LazyLoad>*/}
         

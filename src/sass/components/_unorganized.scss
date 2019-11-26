@@ -7,7 +7,7 @@ article.article {
 
 
 
-#readme, .content {
+#readme, .content, .intro {
   
   border-radius: 5px;
   margin: 1rem 0;
@@ -58,6 +58,12 @@ article.article {
     animation-direction: normal; 
     animation-fill-mode: both;
   
+}
+
+
+.intro {
+  background-color: rgba($pinkish,0.3); 
+  background-color: transparent;
 }
 
 

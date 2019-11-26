@@ -2,24 +2,45 @@
 .sort-header {
     width: 100%;
    // display: flex;
-    margin: 0 0 0.5em;  
+   // margin: 0 0 0.5em;  
   padding: 0;
+  text-align: right;
+  //padding-right: 1rem;
     
     sup {
       //font-style: italic;
       opacity: 0;
       text-transform: uppercase;
       font-size: 80%;
+      float: right;
+      
+      
+      
      
       @include slow-transition;
     }
   }
+
+#sup{
+      opacity: 0;
+      text-transform: uppercase;
+      font-size: 80%;
+      float: right; 
+      margin-top:-1.5rem;
+      margin-right: 1.5rem;
+      @include slow-transition;
+      color: $purpleywhite;
+
+}
 
 .sticky {
   position: sticky;
   top: 0;
   left: 0;
   z-index: 500;
+   animation: fadein 0.5s $ease-bounce;
+    animation-direction: normal; 
+    animation-fill-mode: both;
 }
 
 .sort-container {

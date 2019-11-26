@@ -142,11 +142,11 @@ tidyUp() {
   };
 
   setFilterStyles(headerText, filterText, bgColor, fontColor, supOpacity) {
-    //const header = document.getElementById("view");
+    const header = document.getElementById("view");
     const sup = document.getElementById("sup");
     const filterHeader = document.getElementById("filter-header");
 
-    //header.innerHTML = headerText;
+    header.innerHTML = headerText;
     filterHeader.innerHTML = filterText;
     filterHeader.style.backgroundColor = bgColor;
     filterHeader.style.color = fontColor;
@@ -161,10 +161,12 @@ tidyUp() {
   render() {
     return (
       <>
-        <header className="sort-header">
-          <sup id="sup">Filtered</sup>
-          {/*<h2 id="view">All projects</h2>*/}
-        </header>
+            <sup id="sup">(Filtered)</sup>
+        <section className="content">
+      
+          <h2 id="view">All projects</h2>
+         
+        </section>
 
         <div
           id="sticky-buffer"

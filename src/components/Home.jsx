@@ -10,8 +10,9 @@ class Home extends Component {
   render() {
     return (
       <article>
+         <section className="intro">
         <h1>Hi there!</h1>
-       
+        </section>
         <section className="content">  
         <h2>This site is under construction</h2>
     
