@@ -15,10 +15,17 @@ code {
  
   h1 { 
    // @include debug-focus;
-   font-family: bungee;
-    font-size: 2.5em;
-    color: $purpleywhite;
-    text-align: right;
+   //font-family: bungee;
+    //font-size: 2.5em;
+  color: $purpleywhite;
+    //text-align: right;
+   
+    font-size: 2.5em; 
+    //font-size: 8vmin;
+  font-family: bungee;
+    font-size:3em;
+ // color: $black;
+   // color: rgba($dark-lavendar, 0.3);
    
     
     //&:before {

@@ -146,11 +146,11 @@ tidyUp() {
   };
 
   setFilterStyles(headerText, filterText, bgColor, fontColor, supOpacity) {
-    const header = document.getElementById("view");
+   // const header = document.getElementById("view");
     const sup = document.getElementById("sup");
     const filterHeader = document.getElementById("filter-header");
 
-    header.innerHTML = headerText;
+    //header.innerHTML = headerText;
     filterHeader.innerHTML = filterText;
     filterHeader.style.backgroundColor = bgColor;
     filterHeader.style.color = fontColor;
@@ -166,9 +166,10 @@ tidyUp() {
     return (
       <>
             <sup id="sup" onClick={() => this.unfilterRecords()}>(Filtered)</sup>
-        <section className="content">
+        <section className="content" style={{display: "none"}}>
       
           <h2 id="view">All projects</h2>
+          <p>Some kind of description is gonna go here. Probably.</p>
          
         </section>
 
