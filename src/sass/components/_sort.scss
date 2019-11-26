@@ -30,6 +30,12 @@
       margin-right: 1.5rem;
       @include slow-transition;
       color: $purpleywhite;
+  
+  &:hover {
+    color: $pinkish;
+    cursor: pointer;
+    text-decoration: line-through;
+  }
 
 }
 
