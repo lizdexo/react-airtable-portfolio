@@ -12,7 +12,7 @@
   z-index: 600;
   
   button:active {
-  animation: appear 200ms ease reverse forwards;
+  //animation: appear 200ms ease reverse forwards;
 }
   
   
@@ -237,6 +237,8 @@ input[type="radio"]:checked + label {
   display: none;
 }
 
+
+///===========================================================
 ///===============================Carousel Version============
 /// It's messy and full of overrides
 
@@ -247,9 +249,9 @@ input[type="radio"]:checked + label {
   
   &:after {
     position: absolute;
-    right:-2em;
-    width: 2em;
-    content: "___";
+    right:-1rem;
+    width: 28px;
+    content: "   ";
     background-color: transparent;
     height: 100%;
     max-height: calc(60vh + 2rem);
@@ -257,9 +259,9 @@ input[type="radio"]:checked + label {
   
    &:before {
     position: absolute;
-    left:-2em;
-    width: 2em;
-    content: "___";
+    left:-1rem;
+    width: 28px;
+    content: "   ";
     background-color: transparent;
     height: 100%;
     max-height: calc(60vh + 2rem);
@@ -267,22 +269,62 @@ input[type="radio"]:checked + label {
   
  
   
+
+  
   .carousel.carousel-slider .control-arrow {
-    background-color: $lavendar;
+    transition: all .25s ease-in;
+    opacity: 1;
+    position: absolute;
+    z-index: 2;
+    //top: 20px;
+    top: 3rem;
+    bottom: 3rem;
+    //background: 0 0;
+    border: 0;
+    font-size: 32px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: $pinkish;
+}
+  
+  
+    .carousel.carousel-slider .control-arrow {
+    
     
     &:hover, &:focus, &:active {
-      background-color: $lavendar !important;
-      opacity: 0.5 !important;
-      -webkit-touch-callout: none;
+      transition: all .25s ease-in;
+      background: $lavendar !important;
+      opacity: 1 !important;
+      border-radius: 5px;
+      //-webkit-touch-callout: $lavendar;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: $lavendar;
     }
   
 
+}
+  
+
+  
+
+  
+  .carousel .control-next.control-arrow {
+    right: -1rem;
+    opacity: 1;
+}
+  
+  .carousel .control-prev.control-arrow {
+    left: -1rem;
+    
+ 
+}
+  
+  .carousel.carousel-slider {
+   overflow: visible !important; 
 }
   
   .carousel-slider {
