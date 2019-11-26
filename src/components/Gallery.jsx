@@ -31,7 +31,7 @@ class Gallery extends Component {
       showFilter: false,
       selectedRecord: "recdjhA2dqh6P1eIC",
       content: [],
-      columns: 3
+      columns: 1
     };
   }
 
