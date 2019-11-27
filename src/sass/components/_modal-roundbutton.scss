@@ -289,7 +289,7 @@ input[type="radio"]:checked + label {
     cursor: pointer;
     border-radius: 5px;
     //background-color: $pinkish;
-    width: 40%;
+    width: 30%;
     background-color: transparent;
 }
   
@@ -335,24 +335,23 @@ input[type="radio"]:checked + label {
   .carousel.carousel-slider .control-prev.control-arrow:before {
     border-right: none;
     width: 1.5rem;
-    //width: 1rem;
-    background: lighten($pinkish,7%); 
-   // background: #F7F3FB;
-    content: "\276A";
+    width: 1rem;
+    background: $pinkish;
+    content: "\261C";
     height: 100%;
     position: absolute;
     left: -1rem;
-    left: -0.5rem;
-    top: 0;
-    margin: 0; 
-   border-radius: 5px 0 0 5px;
+    bottom: 1rem;
+    margin: 0;    
+    //border-radius: 5px 0 0 5px;
     //opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    border-radius: 50%;
     //border-radius: 5px;
-  
+    width: 5rem;
+    height: 5rem;
     color: $black;
 }
 
@@ -377,11 +376,11 @@ input[type="radio"]:checked + label {
      transition: all .25s ease-in;
     border-right: none;
     //width: 2rem;
-    background: lighten($pinkish,3%);
-    content: "\276A";
+    background: $lavendar;
+    content: "\261C";
     //height: 100%;
     position: absolute;
-    //left: -1rem;
+    left: -1rem;
     //top: 0;
     margin: 0;    
     //border-radius: 5px;
@@ -406,12 +405,12 @@ input[type="radio"]:checked + label {
   .carousel.carousel-slider .control-next.control-arrow:before {
     border-left: none;
     width: 1.5rem;
-    //width: 1rem;
-    background: lighten($pinkish,7%);
-    content: "\276B";
+    width: 1rem;
+    background: $pinkish;
+    content: "\261E";
     height: 100%;
     position: absolute;
-    right: -0.5rem;
+    right: -1rem;
     top: 0;
     margin: 0;    
     border-radius: 0 5px 5px 0;
@@ -419,7 +418,6 @@ input[type="radio"]:checked + label {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $black;
     
 }
 
@@ -444,15 +442,14 @@ input[type="radio"]:checked + label {
      transition: all .25s ease-in;
     border-right: none;
     //width: 2rem;
-    background: lighten($pinkish,3%);
-    content: "\276B";
+    background: $lavendar;
+    content: "\261E";
     height: 100%;
     position: absolute;
-    //right: -1rem;
+    right: -1rem;
     top: 0;
     margin: 0;    
     //border-radius: 5px;
-     
     
 }
       
@@ -476,16 +473,6 @@ input[type="radio"]:checked + label {
  
 }
   
-  
-  .carousel .carousel-status {
-    position: absolute;
-    top: -3rem;
-    right: 1rem;
-    padding: 5px;
-    font-size: 12px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.9);
-    color: #black !important;
-}
 
   
   
@@ -505,17 +492,8 @@ input[type="radio"]:checked + label {
     position: relative;
     text-align: center;
     background: rgba($purple-shadow, 0.1);
-    padding: 1rem 1rem 0;
-   display: flex;
-   align-items: center;
    
 } 
-  
-  .carousel .slider-wrapper.axis-horizontal .slider .slide {
-    flex-direction: column;
-    flex-flow: column;
-    justify-content: center;
-}
   
   .carousel-inner {
   

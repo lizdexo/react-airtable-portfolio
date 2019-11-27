@@ -24,7 +24,7 @@
   max-width: 970px;
   height: auto;
   //min-height: 90vh;
-  margin: 1em auto 5em;
+  margin: 1em auto;
   background-color: $purpleywhite;
   animation:  grow 200ms ease forwards;
   display: flex;
@@ -281,16 +281,14 @@ input[type="radio"]:checked + label {
     //top: 20px;
     top: 3rem;
     bottom: 3rem;
-    top: 0;
-     bottom: 0;
     //background: 0 0;
     border: 0;
     font-size: 32px;
     cursor: pointer;
     border-radius: 5px;
-    //background-color: $pinkish;
-    width: 40%;
-    background-color: transparent;
+    background-color: $pinkish;
+    //width: 30%;
+    //background-color: transparent;
 }
   
   
@@ -299,16 +297,16 @@ input[type="radio"]:checked + label {
     
     &:hover, &:focus, &:active {
       transition: all .25s ease-in;
-      background: transparent !important;
+      background: $lavendar !important;
       opacity: 1 !important;
       border-radius: 5px;
-      //-webkit-touch-callout: $lavendar;
+     -webkit-touch-callout: $lavendar;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: $lavendar;
       
    
       
@@ -319,11 +317,11 @@ input[type="radio"]:checked + label {
   
   
     .carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
-    //margin: 0 5px;
+    margin: 0 5px;
     display: inline-block;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    content: none;
+    content: "  ";
 }
   
   .carousel .control-next.control-arrow:before {
@@ -332,160 +330,34 @@ input[type="radio"]:checked + label {
     
 }
   
-  .carousel.carousel-slider .control-prev.control-arrow:before {
-    border-right: none;
-    width: 1.5rem;
-    //width: 1rem;
-    background: lighten($pinkish,7%); 
-   // background: #F7F3FB;
-    content: "\276A";
-    height: 100%;
-    position: absolute;
-    left: -1rem;
-    left: -0.5rem;
-    top: 0;
-    margin: 0; 
-   border-radius: 5px 0 0 5px;
-    //opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    //border-radius: 5px;
-  
-    color: $black;
-}
-
-  
-     .carousel.carousel-slider .control-prev.control-arrow {
-    
-    
-    &:hover, &:focus, &:active {
-      transition: all .25s ease-in;
-      background: transparent !important;
-      opacity: 1 !important;
-      border-radius: 5px;
-      //-webkit-touch-callout: $lavendar;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-      -webkit-tap-highlight-color: transparent;
-      
-   &:before {
-     transition: all .25s ease-in;
-    border-right: none;
-    //width: 2rem;
-    background: lighten($pinkish,3%);
-    content: "\276A";
-    //height: 100%;
-    position: absolute;
-    //left: -1rem;
-    //top: 0;
-    margin: 0;    
-    //border-radius: 5px;
-    
-}
-      
-    }
-  
-
-}
-  
-  
-  
- 
-  
-  .carousel .control-next.control-arrow:before {
-    //border-left: 8px solid $black;
-    
-    
-}
-  
-  .carousel.carousel-slider .control-next.control-arrow:before {
-    border-left: none;
-    width: 1.5rem;
-    //width: 1rem;
-    background: lighten($pinkish,7%);
-    content: "\276B";
-    height: 100%;
-    position: absolute;
-    right: -0.5rem;
-    top: 0;
-    margin: 0;    
-    border-radius: 0 5px 5px 0;
-    //opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $black;
+  .carousel .control-prev.control-arrow:before {
+    //border-right: 8px solid $black;
+   // width: 2rem;
+   // background: cyan;
+    content: "  ";
+   // height: 100%;
+   // position: absolute;
+   // left: 0;
+   // top: 0;
+   // margin: 0;    
     
 }
 
   
-     .carousel.carousel-slider .control-next.control-arrow {
-    
-    
-    &:hover, &:focus, &:active {
-      transition: all .25s ease-in;
-      background: transparent !important;
-      opacity: 1 !important;
-      border-radius: 5px;
-      //-webkit-touch-callout: $lavendar;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-      -webkit-tap-highlight-color: transparent;
-      
-   &:before {
-     transition: all .25s ease-in;
-    border-right: none;
-    //width: 2rem;
-    background: lighten($pinkish,3%);
-    content: "\276B";
-    height: 100%;
-    position: absolute;
-    //right: -1rem;
-    top: 0;
-    margin: 0;    
-    //border-radius: 5px;
-     
-    
-}
-      
-    }
-  
-
-}
-  
-
 
   
   .carousel .control-next.control-arrow {
-    //right: -1rem;
+    right: -1rem;
    
 }
   
   .carousel .control-prev.control-arrow {
-    //left: -1rem;
+    left: -1rem;
    // border-left: 35px solid yellow;
     
  
 }
   
-  
-  .carousel .carousel-status {
-    position: absolute;
-    top: -3rem;
-    right: 1rem;
-    padding: 5px;
-    font-size: 12px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.9);
-    color: #black !important;
-}
 
   
   
@@ -505,17 +377,8 @@ input[type="radio"]:checked + label {
     position: relative;
     text-align: center;
     background: rgba($purple-shadow, 0.1);
-    padding: 1rem 1rem 0;
-   display: flex;
-   align-items: center;
    
 } 
-  
-  .carousel .slider-wrapper.axis-horizontal .slider .slide {
-    flex-direction: column;
-    flex-flow: column;
-    justify-content: center;
-}
   
   .carousel-inner {
   
