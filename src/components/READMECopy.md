@@ -22,6 +22,7 @@ Once I have a chance to learn GraphQL, I'll be able to rebuilt this site with [G
 
 ### Up Next
 
+- [ ] Do a whole heck of a lot of code clean up (I've left quite a mess)  
 - [x] Add react-router for linking between pages  
 - [ ] write About page (what do I say about myself??)  
 - [ ] figure out what exactly to put on the homepage  

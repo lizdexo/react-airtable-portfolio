@@ -41,17 +41,26 @@ article.article {
       margin: 0.3rem 0;
       
       &:before {
-        content: '\2023';
+        //content: '\2023';
+        //content: '\22B3';
+        content: '\25C6';
+        //content: '\270F';
+        //content: '\270E';
         margin-right: 0.5rem;
         color: $offblack;
+       
       }
       
     }
   }
   
   input[type=checkbox]{
-    margin-right: 0.3rem;
-    margin-bottom: 0.2rem;
+    //margin-right: 0.3rem;
+    //margin-bottom: 0.2rem;
+    position: absolute;
+    left: 2em;
+    z-index: 500;
+    
   }
   
    animation: fadein 0.5s $ease-bounce;
