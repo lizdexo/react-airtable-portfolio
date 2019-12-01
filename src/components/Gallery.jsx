@@ -30,6 +30,7 @@ class Gallery extends Component {
       showModal: false,
       showFilter: false,
       selectedRecord: "recdjhA2dqh6P1eIC",
+      observerRecord: "",
       content: [],
       columns: 3
     };
@@ -42,12 +43,13 @@ class Gallery extends Component {
       .select({ view: "GalleryAPI", fields: ["Name", "Description", "recordID", "Year", "Images", "Cover", "Software", "Tags", "Category"]})
       .eachPage((records, fetchNextPage) => {
         this.setState({ records: records });
-
         fetchNextPage();
       });
-    
    
   }
+
+
+
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.records !== this.state.records) {
@@ -99,10 +101,7 @@ class Gallery extends Component {
     this.setState({ content: contentToUpdate });
   }
 
-topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+
 
 unBreakColumns = (cols) => {
   console.log(cols);
@@ -120,7 +119,8 @@ unBreakColumns = (cols) => {
     };
 
     return (
-      <article>
+     
+      <article id="gallery">
         <section className="intro">
        <h1>Gallery</h1>
           </section>
@@ -129,6 +129,7 @@ unBreakColumns = (cols) => {
         
        {this.state.showFilter == true ? <Sort onFilter={this.unBreakColumns} /> : null} 
         
+       
         
         <Masonry
           breakpointCols={breakpointColumnsObj}
@@ -214,7 +215,7 @@ unBreakColumns = (cols) => {
                         record.fields["Software"]
                       )
                     }
-                    className="view-link"
+                    className="view-details-link"
                     data-link="internal"
                   >
                     view details
@@ -245,8 +246,10 @@ unBreakColumns = (cols) => {
           )}
         />
         
-        <button className="view-link" id="backtop" onClick={() => this.topFunction()}>back to top</button>
+        
       </article>
+      
+        
     );
   }
 }

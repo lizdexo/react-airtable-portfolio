@@ -1,13 +1,13 @@
 ::selection {
   color: #111111;
   background: $softblue;
-  /* WebKit/Blink Browsers */
+ 
 }
 
 ::-moz-selection {
   color: #111111;
   background: #00ffff;
-  /* Gecko Browsers */
+ 
 }
 
 body {
@@ -23,7 +23,7 @@ body {
 }
 
 
-// basic links
+// basic text links
 
 a {
   color: $softblue;
@@ -44,6 +44,16 @@ a:not([data-link=internal]) {
     color: $black;
     transition: all 300ms ease;       
   }  
+}
+
+
+article {
+  
+a[target=_blank]:not([data-link=internal]) {
+  &:after{
+    @include external-link;
+  }
+}
 }
   
 

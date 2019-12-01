@@ -69,7 +69,7 @@ class App extends Component {
         </Header>
 
         <Main>
-          <div className="main-inner">
+          
             
        
            <Switch>
@@ -87,7 +87,7 @@ class App extends Component {
               </Route>   
            </Switch>
             
-          </div>
+        
         </Main>
         
         <Footer

@@ -1,17 +1,16 @@
 
 
 body {
-  //@include debug-focus;
   @include vh100;
+ 
 }
 
 #root {
- // @include debug;
   @include vh100;
 }
 
 .app-container { 
- // @include debug-focus;
+ 
     @include column;
     justify-content: flex-start; 
     align-items: center;
@@ -20,8 +19,6 @@ body {
 
 
 .site-header {
- //@include debug-focus;
-  //height: auto;
   @include row-wrap;
   justify-content: center;
   align-items: center;
@@ -32,7 +29,6 @@ body {
  max-width: calc(980px + 2rem);
   
   .spacer {
-   // @include debug-focus;
     content: '   ';
     height: 3em;    
     flex-grow: 3;
@@ -43,18 +39,18 @@ body {
 
 main {
            
-          //@include debug;
+     
             margin: 0;
             flex: 1 1 auto;
             width: 100%;
-            @include column;
-            align-items: center;
-            align-content: center;
+           // @include column;
+           // align-items: center;
+            //align-content: center;
             @include layout-padding; 
 }       
 
 .main-inner {
- //@include debug-focus;
+
   width: 100%;
   max-width: 970px;
 }
@@ -64,8 +60,14 @@ main {
 }
 
 
+article:not(#modal) {
+ margin: 0 auto;
+   width: 100%;
+  max-width: 970px;
+}
+
 footer {
- // @include debug; 
+
   @include layout-padding; 
   flex: 0 1 auto;
   min-height: 5em;

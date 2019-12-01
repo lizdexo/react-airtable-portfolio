@@ -7,6 +7,7 @@ article.article {
 
 
 
+
 #readme, .content {
   
   border-radius: 5px;
@@ -19,18 +20,7 @@ article.article {
     color: $dark-lavendar;
     position: relative;
    
-   
-    
-    &:after {
-       //content: ' \25F9';
-      content: '\21F1';
-      transform: rotate(90deg);
-      font-size: 0.8rem;
-      position: absolute;
-      top: -3px;
-      right: -8px;
-      opacity: 0.7;
-    }
+
     
   }
   
@@ -40,12 +30,8 @@ article.article {
     li {
       margin: 0.3rem 0;
       
-      &:before {
-        //content: '\2023';
-        //content: '\22B3';
+      &:before {      
         content: '\25C6';
-        //content: '\270F';
-        //content: '\270E';
         margin-right: 0.5rem;
         color: $offblack;
        
