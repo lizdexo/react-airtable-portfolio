@@ -1,0 +1,29 @@
+
+
+$scrollbar-bg: rgba($black, 0.9);
+$scrollbar-thumb: rgba($lavendar, 0.7);
+$scrollbar-border: rgba($lavendar, 0.3);
+
+
+body::-webkit-scrollbar {
+ width: auto;
+}
+body {
+  scrollbar-width: auto;
+  scrollbar-color: $scrollbar-thumb $scrollbar-bg;
+}
+body::-webkit-scrollbar-track {
+  background: $scrollbar-bg;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb;
+ border-radius: 5px;
+  border: 1px solid $scrollbar-border;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.06);
+  
+  &:hover {
+    background-color: rgba($lavendar, 0.9);
+    cursor: grab;
+  }
+  
+}

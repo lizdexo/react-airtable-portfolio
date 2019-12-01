@@ -59,7 +59,12 @@ nav {
       
       .selected {
         background-color: $pinkish;
-        cursor: auto;
+        cursor: default;
+        
+        &:hover {
+           background: $pinkish;
+          color: $black;
+        }
         
         li a {
           cursor: crosshair;

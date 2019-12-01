@@ -53,14 +53,11 @@
   flex-flow: row nowrap;
   align-items: flex-start;
   padding: 0.3rem 0 0.5rem;
- position: sticky;
-  top: 0;
- left: 0;
+
  z-index: 500;
   background-color: rgba($lavendar, 0.9);
-  //background-color: $lavendar;
-//border-radius: 0 0 10px 10px;
-  border-bottom-right-radius: 10px;
+border-radius: 0 0 10px 10px;
+ // border-bottom-right-radius: 10px; //for sticky version
   width: 100%;
   max-width: 970px;
   overflow-y: scroll; 
@@ -286,7 +283,7 @@ color: $black;
   flex: 0 2 auto;
   }
   
-  @media (hover: none) and (pointer: coarse) {
+  @media (hover: none) {
    
     #allprojects {
    
@@ -306,5 +303,24 @@ color: $black;
     
 }
   
+  @media (pointer: coarse) {
+   
+    #allprojects {
+   
+  &:after {
+    display: none !important;
+  }
+  
+  &:hover{
+     
+    &:after {   
+      display:none !important;
+     
+    }
+  }
+  
+}
+    
+}
   
   
