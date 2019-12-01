@@ -101,6 +101,7 @@ $time-list: 20ms, 40ms, 60ms, 80ms, 100ms, 120ms;
   margin-bottom: 0.5em;
   width: 100%;
   height: 20em;
+  height:320px;
   object-fit: cover;  
   
   &:hover{
@@ -228,3 +229,34 @@ $colors-list: $purple-shadow $ws-light-blue $ws-pastel-green $ws-pastel-pink $ws
     }
 }
 
+
+
+  @media (hover: none) {
+   
+
+.gallery-card img:first-child {
+ 
+  
+  &:hover{
+   filter: none;
+-webkit-filter: none; 
+  
+  }
+}
+    
+}
+
+  @media (pointer: coarse) {
+   
+
+.gallery-card img:first-child {
+ 
+  
+  &:hover{
+   filter: none;
+-webkit-filter: none; 
+  
+  }
+}
+    
+}

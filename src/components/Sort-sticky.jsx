@@ -57,7 +57,7 @@ class Sort extends Component {
     };
   }
 
- 
+  observer = null;
 
   componentDidMount() {
     const cats = categories;
@@ -66,7 +66,11 @@ class Sort extends Component {
       this.countCat(catobj.cat, catobj.id);
     });
 
-   
+    this.observer = new IntersectionObserver(this.lockScroll, {
+      threshold: [0, 1]
+    });
+
+    this.observer.observe(document.querySelector("#sticky-buffer"));
   }
 
  countCat(cat, id) {
@@ -76,7 +80,17 @@ class Sort extends Component {
     lab.innerHTML = matches.length; //need to refactor to dangerouslysetInnerHTML
   }
 
+  lockScroll = entries => {
+    // let details = document.querySelector("details");
+    // let filterIsOpen = details.open;
 
+    if (entries[0].intersectionRatio === 0) {
+      this.setState({ isScrollLockEnabled: true });
+      console.log("boop");
+    } else if (entries[0].intersectionRatio === 1) {
+      this.setState({ isScrollLockEnabled: false });
+    }
+  };
 
   filterRecords = filter => {
     let category = filter;
@@ -144,7 +158,9 @@ tidyUp() {
   }
 
  
- 
+  componentWillUnmount() {
+    this.observer.unobserve(document.querySelector("#sticky-buffer"));
+  }
 
   render() {
     return (
@@ -157,9 +173,12 @@ tidyUp() {
          
         </section>
 
-       
+        <div
+          id="sticky-buffer"
+          style={{ height: "1px", background: "transparent", content: '" "' }}
+        ></div>
 
-     
+        <ScrollLock className="sticky" enabled={this.state.isScrollLockEnabled}>
           <div className="sort-container" id="sort">
             <label
               htmlFor="all"
@@ -210,7 +229,7 @@ tidyUp() {
               ))}
             </details>
           </div>
-        
+        </ScrollLock>
       </>
     );
   }
