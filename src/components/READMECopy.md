@@ -65,6 +65,7 @@ In this section, I'll try to keep track of where I get ideas & code snippets fro
 #### CSS
 
 - Super cool text-shadow: [Hit the Floor Text Effect by ThatGuySam](https://codepen.io/ThatGuySam/pen/CytDA)
+- CSS entities for custom bullets & all sorts of lightweight icons: [Complete CSS Entity Reference](https://www.w3schools.com/cssref/css_entities.asp)
 
 #### Assets
 
@@ -73,7 +74,8 @@ In this section, I'll try to keep track of where I get ideas & code snippets fro
 
 #### JavaScript
 
-- nothing yet
+- easy Intersection Observer trick that I use everywhere: [Detecting when an Element Becomes Fixed in CSS position:sticky with an Intersection Observer](https://usefulangle.com/post/108/javascript-detecting-element-gets-fixed-in-css-position-sticky)  
+
 
 #### React Components
 
@@ -82,7 +84,8 @@ In this section, I'll try to keep track of where I get ideas & code snippets fro
 - FontAwesome icons for React: [FortAwesome/react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
 - Making it easy to write a lot of content in markdown and then parsing it to react/html: [React Markdown](https://github.com/rexxars/react-markdown)  
 - Masonry style layout: [React Masonry CSS](https://www.npmjs.com/package/react-masonry-css)  
-- Controlling scroll for a modal: [react-scroll-lock-component](https://github.com/orteth01/react-scroll-lock-component)  
+- Controlling scroll for a modal: [react-scroll-lock-component](https://github.com/orteth01/react-scroll-lock-component)   
+- The current image carousel that I'm using (with heavily customized styling): [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
 
 #### Useful tutorials & other resources that I depend on
 

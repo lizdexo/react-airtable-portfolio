@@ -74,7 +74,7 @@
  // @include debug;
 }
 
-.view-link {
+.view-details-link {
   
   @include hover;
   background-color: $dark-lavendar;  
@@ -96,14 +96,7 @@
   }
   
   &:active, &:focus {
-        -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-      -webkit-tap-highlight-color: transparent;
-    
+    @include no-flashy-select;
   
   }
   
@@ -111,11 +104,35 @@
 }
 
 #backtop {
+
+  border: 0;
+  outline: none;
   background-color: $softblue;
   color: $black;
-  float: right;
+ float: right;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  position: sticky;
+  bottom: 1rem;
+  right: -0.5rem;
+  display: none;
+  font-size: 70%;
+  height: 4em;
+  content: ' \21E7';
+  min-width: 48px;
+  min-height: 48px;
+  animation: appear 1s ease;
+  
+  i:before {
+    content: ' \21E7';
+    vertical-align: middle;
+    font-size: 2em;
+  }
   
   &:hover {
+    @include no-flashy-select;
+    @include hover;
+    
     color: $purpleywhite;
     background-color: $black;
   }

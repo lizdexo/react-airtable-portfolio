@@ -8,7 +8,6 @@
   //padding-right: 1rem;
     
     sup {
-      //font-style: italic;
       opacity: 0;
       text-transform: uppercase;
       font-size: 80%;
@@ -44,9 +43,9 @@
   top: 0;
   left: 0;
   z-index: 500;
-   animation: fadein 0.5s $ease-bounce;
-    animation-direction: normal; 
-    animation-fill-mode: both;
+  animation: fadein 0.5s $ease-bounce;
+  animation-direction: normal; 
+  animation-fill-mode: both;
 }
 
 .sort-container {
@@ -94,8 +93,7 @@ details {
   
   &[open] {
    // width: 100%;
-   
-  
+    
      outline: none;
     @include smooth-transition;
    
@@ -189,27 +187,14 @@ details {
     i {
       opacity: 0.9;
       font-size: 80%;
-      //font-weight: bold;
       background-color: rgba($dark-lavendar, 0.3);
       display: block;
-      //min-width: 1.5em;
       flex: 1 0 auto;
       border-radius: 0.5em;
       padding: 0.3rem;
       text-align: center;
       
-      &:before {
-     // content: " (";
-     // margin-right: 1px;
-     // font-weight: initial;
-     
-    }
-      
-      &:after {
-       // content: ") ";
-       // margin-left: 1px;
-     // font-weight: initial;
-      }
+   
       
     }
     
@@ -217,7 +202,6 @@ details {
     
     &:before{
        @include fontawesome;
-      //content: "\f07b"; // closed folder
      content: "\f7a4"; // closed lines
       margin-right: 1rem; 
       color: rgba($dark-lavendar, 0.3);
@@ -240,7 +224,6 @@ color: $black;
   @include smooth-transition;
   
   &:before {
- // content: "\f07c"; // open folder
     content: "\f06e"; // open eye
     color: $black;
   }
@@ -248,15 +231,50 @@ color: $black;
 }
 
 } 
-  
-   
+     
 
 #allprojects {
-  &:before {
-       
+  
+  position: relative;
+  &:before {      
         display: none;        
     }
   
+  &:after {
+    
+   color: $purpleywhite;
+    opacity: 0;
+   font-size: 0;
+    content: "View all projects";
+     border-radius: 5px 5px 5px 0;
+    transform:scale(0,0);
+    transform-origin: bottom left;
+  }
+  
+  &:hover{
+    background-color: $black;
+    color: $purpleywhite;
+    
+    &:after{
+      opacity: 0.95;
+    
+      transform:scale(1,1);
+      transition: opacity 100ms ease, transform 200ms ease;
+      //background: $black;
+      //background-color: $purpleywhite;
+      background: rgba($black,0.8);
+      //color: $black;
+      
+      padding: 0.5em;
+      position: absolute;
+      font-size: 0.7em;
+      top: -0.7em;
+      left: 3em;
+      z-index: 300;
+      content: "View all projects";
+       box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+  }
   
 }
 
@@ -268,7 +286,25 @@ color: $black;
   flex: 0 2 auto;
   }
   
+  @media (hover: none) and (pointer: coarse) {
+   
+    #allprojects {
+   
+  &:after {
+    display: none !important;
+  }
   
+  &:hover{
+     
+    &:after {   
+      display:none !important;
+     
+    }
+  }
+  
+}
+    
+}
   
   
   

@@ -1,3 +1,5 @@
+//debugging
+
 @mixin debug {
   outline: 1px dotted red !important;
   background-color: rgba(red, 0.3) !important;
@@ -12,6 +14,8 @@
   outline: 1px dotted blue !important;
   background-color: rgba(blue, 0.3) !important;
 }
+
+//layout view height hacks
 
 @mixin vh100 {
     min-height: -webkit-calc(var(--vh,1vh) * 100);
@@ -59,9 +63,37 @@
   color: $white;
 }
 
+// hover interactions
+
 @mixin hover {
   cursor: pointer;
 }
+
+// hyperlink stuff
+
+@mixin external-link-indicator-orig {
+      content: '\21F1';
+      transform: rotate(90deg);
+      font-size: 0.8rem;
+      position: absolute;
+      top: -3px;
+      right: -8px;
+      opacity: 0.7;
+    }
+
+@mixin external-link {   
+      content: '\25B6';
+      //content: '\226B';
+      transform: rotate(-45deg);
+      //transform: rotate(-90deg);
+      font-size: 0.5rem;
+      position: absolute;
+      top: -3px;
+      right: -7px;
+      opacity: 0.7; 
+}
+
+// transitions
 
 @mixin smooth-transition {
   transition: all 300ms ease;
@@ -72,7 +104,14 @@
   transition: all 500ms ease;
 }
 
+// padding and margins
+
 @mixin layout-padding {
+  padding: 1rem;
+}
+
+
+@mixin standard-padding {
   padding: 1rem;
 }
 
@@ -82,7 +121,19 @@
   background-size: cover;
 }
 
+// selection stuff
+
 @mixin noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin no-flashy-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -101,3 +152,4 @@
      font-family: "Font Awesome 5 Free";
      font-weight: 900;  
 }
+

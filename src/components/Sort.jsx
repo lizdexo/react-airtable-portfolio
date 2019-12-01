@@ -184,11 +184,12 @@ tidyUp() {
               htmlFor="all"
               className="category-tab"
               id="allprojects-label"
+              alt="View all projects"
             >
               <input
                 type="radio"
                 name="category"
-                alt="See all items"
+                alt="View all projects"
                 id="all"
                 data-tab="default"
                 value="all"
