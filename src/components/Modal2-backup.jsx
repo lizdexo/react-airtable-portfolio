@@ -3,6 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LazyLoad from "react-lazyload";
 import { LittleSpinner } from "./Placeholder.jsx";
 import ReactMarkdown from 'react-markdown';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
+
 
 //gonna try this: https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
 
@@ -18,9 +25,12 @@ class GalleryModal extends Component {
       description: this.props.description,
       pics: this.props.pics,
       skills: this.props.skilltags,
-      software: this.props.softwaretags
+      software: this.props.softwaretags,
+      canSwipe: false
     };
   }
+  
+SwipeObserver = null;
 
   static defaultProps = {
     skilltags: [" "],
@@ -67,7 +77,35 @@ class GalleryModal extends Component {
         record.fields["Software"]
       );
     }
+    
+    
+    let options = {
+  //root: document.querySelector('#root-margin'),
+ // rootMargin: '-10px',
+  threshold: [0, 1]
+}
+
+    
+   // this.SwipeObserver = new IntersectionObserver(this.lockSwipe, options);
+
+   // this.SwipeObserver.observe(document.querySelector("#swipe-buffer"));
+  
+    
   }
+
+
+lockSwipe = entries => {
+    // let details = document.querySelector("details");
+    // let filterIsOpen = details.open;
+
+    if (entries[0].intersectionRatio === 1) {
+      this.setState({ canSwipe: true });
+      
+    } else if (entries[0].intersectionRatio === 0) {
+      this.setState({ canSwipe: false });
+      
+    }
+  };
 
   renderContent = (id, name, desc, attachments, skilltags, softwaretags) => {
     const thisArray = id;
@@ -100,9 +138,13 @@ class GalleryModal extends Component {
   };
 
   render() {
+
+    
     return (
-      <div className="modal-container" onClick={this.handleBack}>
+      <div className="modal-container" id="root-margin" onClick={this.handleBack}>
+       
         <article id="modal" onClick={event => event.stopPropagation()}>
+          <section>
           <header>
             <h3>{this.state.title}</h3>
             <button className="button-close" onClick={this.handleBack}>
@@ -129,83 +171,49 @@ class GalleryModal extends Component {
               <dd>oops, something broke</dd>
             )}
           </dl>
+            </section>
           
-
-          <section className="gallery-item-tabs">
-            <div className="tab-container" id="default-tab-container">
-              <input
-                type="radio"
-                name="item"
-                id="defaulttab"
-                data-tab="default"
-                value={this.state.pics[0].filename}
-                defaultChecked={true}
-              />
-              <label htmlFor="defaulttab" className="thumbnail-tab">
-              
-                <img className="thumbnail-image" src={this.state.pics[0].url} alt={this.state.pics[0].filename} />
-              
-              </label>
-
-              <div
-                className="tab-content"
-                data-tab="default"
-                data-visibility="off"
-              >
-                
-                <img className="tab-content-pic" src={this.state.pics[0].url} alt={"Item 0: " + this.state.pics[0].filename} />
-               
-                <a
-                  href={this.state.pics[0].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-link="internal"
-                  className="view-larger"
-                >
-                  view larger  <FontAwesomeIcon icon="external-link-alt" />
-                </a>
-              </div>
-            </div>
-
-            {this.state.pics.length > 0 ? (
+          <Carousel
+            infiniteLoop={true}
+            className="modal-carousel"
+            showIndicators={false}
+            swipeable={false}
+            dynamicHeight={false}
+            axis="horizontal" 
+            transitionTime={0}
+            >
+            
+           {this.state.pics.length > 0 ? (
               this.state.pics.map((pic, index) => (
-                <div className="tab-container" data-tab={"tab" + index} key={pic.id}>
-                  <input
-                    type="radio"
-                    name="item"
-                    alt={"Item " + index + ": " + pic.filename} 
-                    id={pic.id}
-                    data-tab={"tab" + index}
-                    value={pic.filename}
-                  />
-                  <label htmlFor={pic.id} className="thumbnail-tab">
-                    
-                    <img className="thumbnail-image" src={pic.url} alt={"Item " + index + ": " + pic.filename} />
-               
-                  </label>
+                
 
-                  <div
-                    className="tab-content"
-                    data-tab={"tab" + index}
-                    data-visibility="off"
-                  >
+                  <div key={pic.id}>
                     
-                    <img className="tab-content-pic" src={pic.url} alt={pic.filename} />
+                    <img className="carousel-content-pic" src={pic.url} alt={pic.filename} />
               
                     <a href={pic.url} target="_blank" rel="noopener noreferrer" data-link="internal">
                       view larger  <FontAwesomeIcon icon="external-link-alt" />
                     </a>
+                  
+                 
                   </div>
-                </div>
+                
               ))
             ) : (
               <LittleSpinner />
-            )}
-
-            <div className="image-holder" data-placeholder="gallery"></div>
-          </section>
-          {this.props.children}
+            )}    
+            
+          
+            </Carousel>
+         <div
+          id="swipe-buffer"
+          style={{ height: "1px", width: "3px", background: "transparent", content: '" "', position: "absolute", bottom: "100px", }}
+        >
+          </div>
+     
+        
         </article>
+       
       </div>
     );
   }
