@@ -2,23 +2,19 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LazyLoad from "react-lazyload";
 import { LittleSpinner } from "./Placeholder.jsx";
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from "react-markdown";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-
-
+import { Carousel } from "react-responsive-carousel";
 
 //gonna try this: https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
-
 
 class GalleryModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     
       currentID: "",
       id: this.props.recordID,
       title: this.props.title,
@@ -29,8 +25,6 @@ class GalleryModal extends Component {
       canSwipe: false
     };
   }
-  
-SwipeObserver = null;
 
   static defaultProps = {
     skilltags: [" "],
@@ -41,18 +35,18 @@ SwipeObserver = null;
   async componentDidMount(props) {
     let paramID = this.props.match.params;
     let thisRecord = paramID.recordID;
-    
+
     const apiKey = process.env.REACT_APP_AIRTABLE_API_KEY;
     const baseID = process.env.REACT_APP_API_AIRTABLE_BASE_ID;
-    
+
     const fetchURL =
-      "https://api.airtable.com/v0/"+ baseID + "/Portfolio/" + thisRecord;
-    
-    const auth = "Bearer " + apiKey;    
+      "https://api.airtable.com/v0/" + baseID + "/Portfolio/" + thisRecord;
+
+    const auth = "Bearer " + apiKey;
     const header = new Headers({
-  'Content-Type': "application/json",
-  'Authorization': auth
-});
+      "Content-Type": "application/json",
+      Authorization: auth
+    });
 
     if (this.props.title !== undefined) {
       console.log("got props from parent for:", this.props.title);
@@ -66,7 +60,6 @@ SwipeObserver = null;
       });
 
       const record = await response.json();
-   
 
       this.renderContent(
         thisRecord,
@@ -77,35 +70,7 @@ SwipeObserver = null;
         record.fields["Software"]
       );
     }
-    
-    
-    let options = {
-  //root: document.querySelector('#root-margin'),
- // rootMargin: '-10px',
-  threshold: [0, 1]
-}
-
-    
-   // this.SwipeObserver = new IntersectionObserver(this.lockSwipe, options);
-
-   // this.SwipeObserver.observe(document.querySelector("#swipe-buffer"));
-  
-    
   }
-
-
-lockSwipe = entries => {
-    // let details = document.querySelector("details");
-    // let filterIsOpen = details.open;
-
-    if (entries[0].intersectionRatio === 1) {
-      this.setState({ canSwipe: true });
-      
-    } else if (entries[0].intersectionRatio === 0) {
-      this.setState({ canSwipe: false });
-      
-    }
-  };
 
   renderContent = (id, name, desc, attachments, skilltags, softwaretags) => {
     const thisArray = id;
@@ -125,7 +90,6 @@ lockSwipe = entries => {
     }
   };
 
-
   handleBack = e => {
     if (this.props.title !== undefined) {
       let close = this.props.history;
@@ -138,82 +102,80 @@ lockSwipe = entries => {
   };
 
   render() {
-
-    
     return (
-      <div className="modal-container" id="root-margin" onClick={this.handleBack}>
-       
+      <div
+        className="modal-container"
+        id="root-margin"
+        onClick={this.handleBack}
+      >
         <article id="modal" onClick={event => event.stopPropagation()}>
           <section>
-          <header>
-            <h3>{this.state.title}</h3>
-            <button className="button-close" onClick={this.handleBack}>
-              <FontAwesomeIcon icon="times" />
-            </button>
-          </header>
-               <ReactMarkdown linkTarget="_blank">
-         {this.state.description}
-          </ReactMarkdown>
-          
-          <dl className="tags">
-            <dt>Tags</dt>
-            {this.state.skills.length > 0 ? (
-              this.state.skills.map((tag, index) => <dd key={index}>{tag}</dd>)
-            ) : (
-              <dd>oops, something broke</dd>
-            )}
+            <header>
+              <h3>{this.state.title}</h3>
+              <button className="button-close" onClick={this.handleBack}>
+                <FontAwesomeIcon icon="times" />
+              </button>
+            </header>
 
-            <dt>Software</dt>
+            <ReactMarkdown linkTarget="_blank">
+              {this.state.description}
+            </ReactMarkdown>
 
-            {this.state.software.length > 0 ? (
-              this.state.software.map((software, index) => <dd key={index}>{software}</dd>)
-            ) : (
-              <dd>oops, something broke</dd>
-            )}
-          </dl>
-            </section>
-          
+            <dl className="tags">
+              <dt>Tags</dt>
+              {this.state.skills.length > 0 ? (
+                this.state.skills.map((tag, index) => (
+                  <dd key={index}>{tag}</dd>
+                ))
+              ) : (
+                <dd>oops, something broke</dd>
+              )}
+
+              <dt>Software</dt>
+
+              {this.state.software.length > 0 ? (
+                this.state.software.map((software, index) => (
+                  <dd key={index}>{software}</dd>
+                ))
+              ) : (
+                <dd>oops, something broke</dd>
+              )}
+            </dl>
+          </section>
+
           <Carousel
             infiniteLoop={true}
             className="modal-carousel"
             showIndicators={false}
             swipeable={false}
             dynamicHeight={false}
-            axis="horizontal" 
+            axis="horizontal"
             transitionTime={0}
-            >
-            
-           {this.state.pics.length > 0 ? (
+          >
+            {this.state.pics.length > 0 ? (
               this.state.pics.map((pic, index) => (
-                
+                <div key={pic.id}>
+                  <img
+                    className="carousel-content-pic"
+                    src={pic.url}
+                    alt={pic.filename}
+                  />
 
-                  <div key={pic.id}>
-                    
-                    <img className="carousel-content-pic" src={pic.url} alt={pic.filename} />
-              
-                    <a href={pic.url} target="_blank" rel="noopener noreferrer" data-link="internal">
-                      view larger  <FontAwesomeIcon icon="external-link-alt" />
-                    </a>
-                  
-                 
-                  </div>
-                
+                  <a
+                    href={pic.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-link="internal"
+                  >
+                    view larger <FontAwesomeIcon icon="external-link-alt" />
+                  </a>
+                </div>
               ))
             ) : (
               <LittleSpinner />
-            )}    
-            
-          
-            </Carousel>
-         <div
-          id="swipe-buffer"
-          style={{ height: "1px", width: "3px", background: "transparent", content: '" "', position: "absolute", bottom: "100px", }}
-        >
-          </div>
-     
-        
+            )}
+          </Carousel>
         </article>
-       
       </div>
     );
   }
