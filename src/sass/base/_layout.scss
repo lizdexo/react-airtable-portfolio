@@ -67,6 +67,25 @@ article:not(#modal) {
   max-width: 970px;
 }
 
+
+.content p {
+  max-width: 700px;
+  
+}
+
+.content ul {
+  max-width: 700px;
+
+}
+
+#readme p {
+  max-width: 700px;
+}
+
+#readme ul {
+  max-width: 700px;
+}
+
 footer {
 
   @include layout-padding; 

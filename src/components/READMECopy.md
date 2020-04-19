@@ -1,6 +1,6 @@
 ## About this Project
 
-Hi there! This is my personal portfolio project.
+This is my personal portfolio project.
 
 Build stack:
 
@@ -24,8 +24,8 @@ Once I have a chance to learn GraphQL, I'll be able to rebuilt this site with [G
 
 - [ ] Do a whole heck of a lot of code clean up (I've left quite a mess)  
 - [x] Add react-router for linking between pages  
-- [ ] write About page (what do I say about myself??)  
-- [ ] figure out what exactly to put on the homepage  
+- [x] write About page (what do I say about myself??)  
+- [x] figure out what exactly to put on the homepage  
 - [x] add some links to the footer  
 - [ ] create a form for the Contact page that submits data to Airtable  
 - [ ] add a page to feature CodePen projects    

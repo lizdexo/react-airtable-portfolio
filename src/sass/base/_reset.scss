@@ -70,8 +70,7 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: inherit;
-  font-weight: bolder;
+  font-weight: bold !important;
 }
 dfn {
   font-style: italic;
