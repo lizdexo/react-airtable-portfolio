@@ -124,14 +124,14 @@ unBreakColumns = (cols) => {
         <section className="intro">
        <h1>Gallery</h1>
           </section>
-        {/*<LazyLoad height={200} offset={500} once>  */}
-        {/*</LazyLoad>*/}
+       
         
-        
-        
+       
        {this.state.showFilter == true ? <Sort onFilter={this.unBreakColumns} /> : null} 
         
 
+        
+        
         
         <Masonry
           breakpointCols={breakpointColumnsObj}
