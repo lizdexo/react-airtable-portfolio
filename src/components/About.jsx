@@ -27,8 +27,9 @@ class About extends Component {
              </section>
         <section className="content">
           <h2>About Me</h2>
-          <p>Hi! I'm a history nerd who got a degree in Political Economy but then realized I love design & development too much to totally get away from tech-related jobs. Currently, I work as a documentation specialist and do a variety of creative projects in my free time. </p>
-          <p>My interests range from art & illustration to front-end coding to technical documentation and everything in between.  
+          <p>Hi! I'm a nerd who got a degree in Political Economy but then realized I love design & development too much to totally get away from tech-related stuff. </p>
+          <p>Currently, I work as a documentation specialist and do a variety of creative projects in my free time. </p>
+          <p>My interests include art & illustration, front-end development, technical documentation, and everything in between.  
           If it involves managing/developing informational resources or making useful things that look nice, I'm probably into it.</p>
           
           
