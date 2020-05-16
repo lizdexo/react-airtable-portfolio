@@ -106,6 +106,12 @@
 #backtop {
 
   border: 0;
+  box-shadow: 2px 0px 0px 0.2rem rgba(#212121,0.1),
+    0px 2px 0px 0.2rem rgba(#212121,0.1),
+    -2px 0px 0px 0.2rem rgba(#212121,0.1),
+    0px -2px 0px 0.2rem rgba(#212121,0.1),
+    0px 0px 0px 0.5rem rgba($black,0.8),
+    0px 0px 7px 0.7rem rgba($black,0.1);
   outline: none;
   background-color: $softblue;
   color: $black;
@@ -117,6 +123,7 @@
   right: -0.5rem;
   display: none;
   font-size: 70%;
+  font-weight: bold;
   height: 4em;
   content: ' \21E7';
   min-width: 48px;

@@ -33,12 +33,14 @@ nav {
       height: 100%;
       text-align: center;
       font-size: 1em;
+      font-weight: bold;
       
       
       a {
       
           background: rgba($dark-lavendar, 0.2);
           color: $black;
+        color: white;
           width: 100%;
           display: block;
           padding: 15px;
