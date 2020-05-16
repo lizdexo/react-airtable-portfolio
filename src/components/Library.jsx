@@ -36,8 +36,21 @@ class CloseButton extends Component {
 export { CloseButton };
 
 
+/* utility */
 
+const WIP = (props) => {
+  return (
+    <mark className="inline-status" style={{backgroundColor:'#99FFCC'}}>WIP</mark>
+  )
+}
+export {WIP};
 
+const Draft = (props) => {
+  return (
+    <mark className="inline-status" style={{backgroundColor:'#69F0AE'}}>Working draft</mark>
+  )
+}
+export {Draft};
 
 
 

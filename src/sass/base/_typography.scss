@@ -40,21 +40,27 @@ code {
 
 
 h2 {
-  font-size: 2em;  
+  font-size: 2.5em;  
   font-family: bungee;
   color: $black;
+  //margin-top: 1vmin;
+  margin-bottom:2vmin;
 }
 
 h3 {
   //@include debug-focus;
   font-family: bungee;
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin-top: 2rem;
   color: $black;
+  margin-bottom:1vmin;
 }
 
 h4 {
+  font-family: bungee;
   font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 1.5rem;
 }
 
 h5 {
@@ -66,8 +72,16 @@ h6 {
   font-weight: bold;
 }
 
+
+
 p {
-  margin: 1rem 0;  
+  margin: 1rem 0; 
+  line-height: 135%;
+  font-size: 125%;
+  
+  small {
+    font-size: 1rem;
+  }
 }
 
 small {
@@ -75,6 +89,7 @@ small {
   display: block;
   margin: 0.5rem 0;
   opacity: 0.8;
+  line-height: 120%;
 }
 
 
@@ -130,3 +145,17 @@ small {
     line-height: 1;
 }
 
+#readme ul {
+  line-height: 135%;
+  font-size: 120%;
+}
+
+.content ul {
+   line-height: 135%;
+  font-size: 120%;
+
+}
+
+em {
+  font-weight: bold;
+}

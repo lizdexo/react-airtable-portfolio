@@ -181,4 +181,11 @@ When I eventually add a blog module, <header> and <footer> will be utilized with
   }
   
   
+  #readme, .content {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+  }
+  
+  
 }
