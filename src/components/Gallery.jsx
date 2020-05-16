@@ -131,11 +131,7 @@ unBreakColumns = (cols) => {
         
        {this.state.showFilter == true ? <Sort onFilter={this.unBreakColumns} /> : null} 
         
-       <section>
-        <p><small><b>Please note:</b> If you're on mobile, some items in the gallery might load a little slowly. There's a bunch of large images in there that need to be optimized, which is on my <Link to="/about">to-do list</Link>.</small></p>
-          
-        
-        </section>
+
         
         <Masonry
           breakpointCols={breakpointColumnsObj}
