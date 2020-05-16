@@ -91,8 +91,8 @@ class App extends Component {
         </Main>
         
         <Footer
-          MM="4"
-          DD="18"
+          MM="5"
+          DD="16"
           YYYY="2020"         
           />
       </div>

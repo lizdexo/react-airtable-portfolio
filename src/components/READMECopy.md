@@ -1,8 +1,17 @@
-## About this Project
+## About this Website
 
-This is my personal portfolio project.
+This is my personal portfolio site. Its main purpose is to showcase my personal & professional work, but behind the scenes it's also one big practice project. 
 
-Build stack:
+I coded it from scratch as a way to exercise my web development skills, and because I like having the flexibility of a totally blank canvas to make it look & act however I want. It's been really fun figuring out various challenges and seeing it all come together! I'm hoping to do a lot more in the future.
+
+
+### Planning & Design
+
+I used Figma and Milanote to plan out what I wanted to do. The color scheme was inspired by a wallpaper that I really liked. Eventually I'll write more about the whole process here and include examples.
+
+There's a lot left to do when it comes to building and improving this site, and I'm learning new things as I go. I'm a bit of a perfectionist so I'm constantly finding things to fix & improve. Check out my [To Do list](#to-do-list) to see what I'm up to.
+
+### Build stack
 
 - Scaffolding: [create-react-app](https://github.com/facebook/create-react-app)
 - Navigation: [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
@@ -11,54 +20,18 @@ Build stack:
 - IDE: [Glitch](https://glitch.com/)
 - Deployment: [Netlify](https://www.netlify.com/)
 
-### Why React?
+#### React.JS?
 
 React isn't necessarily recommended for simple websites like this, but I've been needing to put together a portfolio website for a very long time and I decided this would be a perfect chance to really play around with React.
 
-In particular, I wanted to learn how to work with the Airtable API since that is where I have been storing & organizing all of my design projects, and I'm most familiar with using [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) for API calls. 
+I considered building it with [Gatsby](https://www.gatsbyjs.org/), which is a popular choice for static personal sites, but it requires GraphQL for API calls. My primary goal was to learn how to work with the Airtable API since that is where I have been storing & organizing all of my design projects, so I needed to start with something I'm more familiar with - [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). 
 
-Once I have a chance to learn GraphQL, I'll be able to rebuilt this site with [Gatsby](https://www.gatsbyjs.org/).
+Once I have a chance to learn GraphQL, I'll be able to rebuild this site with Gatsby. Or, I might look into some other similar options like Next.js or React Static.
 
-
-### Up Next
-
-- [ ] Do a whole heck of a lot of code clean up (I've left quite a mess)  
-- [x] Add react-router for linking between pages  
-- [x] write About page (what do I say about myself??)  
-- [x] figure out what exactly to put on the homepage  
-- [x] add some links to the footer  
-- [ ] create a form for the Contact page that submits data to Airtable  
-- [ ] add a page to feature CodePen projects    
-- [x] add markdown to the "description" Gallery field, and render with [react-markdown](https://github.com/rexxars/react-markdown)  
-- [ ] optimize images so they load faster  
-- [ ] do an accessibility pass to make sure I meet basic standards  
-
-*bugs to fix*
-
-- [ ] figure out what's wrong with my manifest.json file  
-- [ ] figure out why GitHub is giving me a bunch of security warnings 
-
-**big future plans**
-
-- [ ] do a more in-depth accessibility analysis  
-- [ ] add a blog module that uses markdown  
-- [ ] add a blog subdomain to netlify  
-- [ ] clean up & refactor my css a LOT  
-- [ ] clean up & refactor some of my javascript and component organization
-
-**even bigger future plans**
-
-- [ ] learn GraphQL and redo the entire thing in Gatsby  
-- [ ] migrate everything out of Glitch to my own local environment  
-- [ ] convert this codebase to be used for [dexo.dev](https://dexo.dev/)  
-- [ ] redo the layout so that I can have a sidebar component  
-- [ ] look into SEO stuff
 
 ---
 
----
-
-## Credits
+### Credits
 
 In this section, I'll try to keep track of where I get ideas & code snippets from. I obviously won't list every Stack Overflow answer and documentation site that I come across, but if I use a whole chunk of code, library, or other framework or take inspiration from a particular source, it will be credited here (...as long as I didn't lose it in my sea of 500 tabs).
 
@@ -102,3 +75,10 @@ Here are the Glitch projects that helped me figure stuff out:
 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d542ec44-94b5-4fe2-b61d-f2909adf8e75/deploy-status)](https://app.netlify.com/sites/quirky-curie-d765f6/deploys)
+
+   
+   
+   
+   
+      
+---

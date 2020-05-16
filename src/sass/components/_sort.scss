@@ -60,7 +60,7 @@ border-radius: 0 0 10px 10px;
  // border-bottom-right-radius: 10px; //for sticky version
   width: 100%;
   max-width: 970px;
-  overflow-y: scroll; 
+  overflow-y: scroll hidden; 
   max-height: 100vh;
   
   -webkit-overflow-scrolling: touch;
