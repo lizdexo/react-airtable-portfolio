@@ -179,8 +179,8 @@ class GalleryModal extends Component {
             )}
           </Carousel>
           
-          {this.state.copyright === true ? (<small id="copyright">&#169; Liz Dudek 2020</small>) : (<details><summary><small>Fair Use Statement</small></summary><small>This work was created for an employer who retains copyright or licensing for the content and/or image(s) displayed here. 
-              I have included excerpts of published works in my portfolio for purpose of discussing my skills, experiences, specific contributions and participation in the devlopment of the work; This should not be seen as an attempt to claim ownership or redistribute the work. Such usage is personal, non-commercial, and non-competitive in accordance with <a href="https://www.law.cornell.edu/uscode/text/17/107" target="_blank" rel="noopener noreferrer">Fair Use</a> provisions.</small></details>)}
+          {this.state.copyright === true ? (<small id="copyright">&#169; Liz Dudek 2020</small>) : (<details id="nocopyright"><summary><small>Fair Use Statement</small></summary><small>This work was created for an employer who retains copyright or licensing for the content and/or image(s) displayed here. 
+              Excerpts are included for the purpose of discussing my skills, experience, and contributions; This should not be seen as an attempt to claim ownership or redistribute the work. Such usage is personal, non-commercial, and non-competitive in accordance with <a href="https://www.law.cornell.edu/uscode/text/17/107" target="_blank" rel="noopener noreferrer">Fair Use</a> provisions.</small></details>)}
           
           <section>
            <ReactMarkdown linkTarget="_blank">
