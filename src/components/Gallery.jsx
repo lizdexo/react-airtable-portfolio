@@ -185,7 +185,7 @@ unBreakColumns = (cols) => {
 
                     <dl className="tags">
                       
-                      <dt>Tags</dt>
+                      <dt></dt>
                       {record.fields["Tags"].length > 0 ? (
                         record.fields["Tags"].map((tag, index) => (
                           <dd key={index}>{tag}</dd>
@@ -194,7 +194,7 @@ unBreakColumns = (cols) => {
                         <dd>No example available</dd>
                       )}
 
-                      <dt>Software</dt>
+                      <dt></dt>
 
                       {record.fields["Software"].length > 0 ? (
                         record.fields["Software"].map((software, index) => (

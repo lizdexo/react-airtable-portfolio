@@ -121,7 +121,7 @@ class GalleryModal extends Component {
             </header>
 
            <dl className="tags">
-              <dt>Tags</dt>
+              <dt></dt>
               {this.state.skills.length > 0 ? (
                 this.state.skills.map((tag, index) => (
                   <dd key={index}>{tag}</dd>
@@ -179,8 +179,8 @@ class GalleryModal extends Component {
             )}
           </Carousel>
           
-          {this.state.copyright === true ? (<small id="copyright">&#169; Liz Dudek 2020</small>) : (<details id="nocopyright"><summary><small>Fair Use Statement</small></summary><small>This work was created for an employer who retains copyright or licensing for the content and/or image(s) displayed here. 
-              Excerpts are included for the purpose of discussing my skills, experience, and contributions; This should not be seen as an attempt to claim ownership or redistribute the work. Such usage is personal, non-commercial, and non-competitive in accordance with <a href="https://www.law.cornell.edu/uscode/text/17/107" target="_blank" rel="noopener noreferrer">Fair Use</a> provisions.</small></details>)}
+          {this.state.copyright === true ? (<small id="copyright">&#169; Liz Dudek 2020</small>) : (<details id="nocopyright"><summary><small>Fair Use Statement</small></summary><small>This work was created for an employer who retains copyright or licensing for the content and/or image(s) seen above. 
+              Excerpts are displayed here for the purpose of discussing my skills, experience, and contributions; This should not be seen as an attempt to claim ownership or redistribute the work. Such usage is personal, non-commercial, and non-competitive in accordance with <a href="https://www.law.cornell.edu/uscode/text/17/107" target="_blank" rel="noopener noreferrer">Fair Use</a> provisions.</small></details>)}
           
           <section>
            <ReactMarkdown linkTarget="_blank">
