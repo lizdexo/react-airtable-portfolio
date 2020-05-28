@@ -169,6 +169,22 @@ article.article {
 }
 
 
+#copyright {
+  
+  margin: 0 1rem;
+  
+  &:before {
+  content: "\2139"
+    margin: 0 0.5rem;
+  }
+  
+}
 
-
-
+#nocopyright {
+  margin: 0 1rem;
+  
+  summary {
+    text-decoration: underline;
+  }
+  
+}
