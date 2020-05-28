@@ -40,7 +40,7 @@ class Gallery extends Component {
   
   componentDidMount() {
     base("Portfolio")
-      .select({ view: "GalleryAPI", fields: ["Name", "Description", "recordID", "Year", "Images", "Cover", "Software", "Tags", "Category"]})
+      .select({ view: "GalleryAPI", fields: ["Name", "Description", "recordID", "Year", "Images", "Cover", "Software", "Tags", "Category", "Copyright"]})
       .eachPage((records, fetchNextPage) => {
         this.setState({ records: records });
         fetchNextPage();
@@ -69,7 +69,7 @@ class Gallery extends Component {
     }
   }
 
-  handleShow = (record, name, desc, attachments, skilltags, softwaretags) => {
+  handleShow = (record, name, desc, attachments, skilltags, softwaretags, copyrightbool) => {
       
     this.setState({ selectedRecord: record });
 
@@ -79,12 +79,14 @@ class Gallery extends Component {
     const picArray = attachments;
     const skilltagsArray = skilltags;
     const softwaretagsArray = softwaretags;
+    const copyright = copyrightbool;
     const selectedContent = [
       selectedTitle,
       description,
       picArray,
       skilltagsArray,
-      softwaretagsArray
+      softwaretagsArray,
+      copyright
     ];
     const prevContent = this.state.content;
 
@@ -156,7 +158,8 @@ unBreakColumns = (cols) => {
                         record.fields["Description"],
                         record.fields["Images"],
                         record.fields["Tags"],
-                        record.fields["Software"]
+                        record.fields["Software"],
+                  record.fields["Copyright"]
                       )
                     }
                     data-link="internal"
@@ -214,7 +217,8 @@ unBreakColumns = (cols) => {
                         record.fields["Description"],
                         record.fields["Images"],
                         record.fields["Tags"],
-                        record.fields["Software"]
+                        record.fields["Software"],
+                        record.fields["Copyright"]
                       )
                     }
                     className="view-details-link"
@@ -243,6 +247,7 @@ unBreakColumns = (cols) => {
               pics={this.state.content[2]}
               skilltags={this.state.content[3]}
               softwaretags={this.state.content[4]}
+              copyright={this.state.content[5]}
             />
            </ScrollLock>
           )}
