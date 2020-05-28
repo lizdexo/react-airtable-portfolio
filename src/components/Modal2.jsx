@@ -22,6 +22,7 @@ class GalleryModal extends Component {
       pics: this.props.pics,
       skills: this.props.skilltags,
       software: this.props.softwaretags,
+      copyright: this.props.copyright,
       canSwipe: false
     };
   }
@@ -67,12 +68,13 @@ class GalleryModal extends Component {
         record.fields["Description"],
         record.fields["Images"],
         record.fields["Tags"],
-        record.fields["Software"]
+        record.fields["Software"],
+        record.fields["Copyright"]
       );
     }
   }
 
-  renderContent = (id, name, desc, attachments, skilltags, softwaretags) => {
+  renderContent = (id, name, desc, attachments, skilltags, softwaretags, copyrightbool) => {
     const thisArray = id;
     const prevContent = this.state.id;
 
@@ -83,7 +85,8 @@ class GalleryModal extends Component {
         description: desc,
         pics: attachments,
         skills: skilltags,
-        software: softwaretags
+        software: softwaretags,
+        copyright: copyrightbool
       });
     } else {
       console.log("well dang");
@@ -117,11 +120,7 @@ class GalleryModal extends Component {
               </button>
             </header>
 
-            <ReactMarkdown linkTarget="_blank">
-              {this.state.description}
-            </ReactMarkdown>
-
-            <dl className="tags">
+           <dl className="tags">
               <dt>Tags</dt>
               {this.state.skills.length > 0 ? (
                 this.state.skills.map((tag, index) => (
@@ -131,7 +130,7 @@ class GalleryModal extends Component {
                 <dd>oops, something broke</dd>
               )}
 
-              <dt>Software</dt>
+              <dt></dt>
 
               {this.state.software.length > 0 ? (
                 this.state.software.map((software, index) => (
@@ -141,6 +140,8 @@ class GalleryModal extends Component {
                 <dd>oops, something broke</dd>
               )}
             </dl>
+
+            
           </section>
 
           <Carousel
@@ -160,6 +161,8 @@ class GalleryModal extends Component {
                     src={pic.url}
                     alt={pic.filename}
                   />
+                  
+                  
 
                   <a
                     href={pic.url}
@@ -175,6 +178,22 @@ class GalleryModal extends Component {
               <LittleSpinner />
             )}
           </Carousel>
+          
+          {this.state.copyright === true ? (<small id="copyright">&#169; Liz Dudek 2020</small>) : (<details><summary><small>Fair Use Statement</small></summary><small>This work was created for an employer who retains copyright or licensing for the content and/or image(s) displayed here. 
+              I have included excerpts of published works in my portfolio for purpose of discussing my skills, experiences, specific contributions and participation in the devlopment of the work; This should not be seen as an attempt to claim ownership or redistribute the work. Such usage is personal, non-commercial, and non-competitive in accordance with <a href="https://www.law.cornell.edu/uscode/text/17/107" target="_blank" rel="noopener noreferrer">Fair Use</a> provisions.</small></details>)}
+          
+          <section>
+           <ReactMarkdown linkTarget="_blank">
+              {this.state.description}
+            </ReactMarkdown>
+            
+            
+            
+            <button className="view-details-link"
+                    data-link="internal" style={{width: '100%'}} onClick={this.handleBack}>Return to gallery</button>
+            
+          </section>
+          
         </article>
       </div>
     );
