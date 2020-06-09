@@ -1,15 +1,4 @@
-## About this Website
 
-This is my personal portfolio site. Its main purpose is to showcase my personal & professional work, but behind the scenes it's also one big practice project. 
-
-I coded it from scratch as a way to exercise my web development skills, and because I like having the flexibility of a totally blank canvas to make it look & act however I want. It's been really fun figuring out various challenges and seeing it all come together! I'm hoping to do a lot more in the future.
-
-
-### Planning & Design
-
-I used Figma and Milanote to plan out what I wanted to do. The color scheme was inspired by a wallpaper that I really liked. Eventually I'll write more about the whole process here and include examples.
-
-There's a lot left to do when it comes to building and improving this site, and I'm learning new things as I go. I'm a bit of a perfectionist so I'm constantly finding things to fix & improve. Check out my [To Do list](#to-do-list) to see what I'm up to.
 
 ### Build stack
 
@@ -20,16 +9,9 @@ There's a lot left to do when it comes to building and improving this site, and 
 - IDE: [Glitch](https://glitch.com/)
 - Deployment: [Netlify](https://www.netlify.com/)
 
-#### React.JS?
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d542ec44-94b5-4fe2-b61d-f2909adf8e75/deploy-status)](https://app.netlify.com/sites/quirky-curie-d765f6/deploys)
 
-React isn't necessarily recommended for simple websites like this, but I've been needing to put together a portfolio website for a very long time and I decided this would be a perfect chance to really play around with React.
-
-I considered building it with [Gatsby](https://www.gatsbyjs.org/), which is a popular choice for static personal sites, but it requires GraphQL for API calls. My primary goal was to learn how to work with the Airtable API since that is where I have been storing & organizing all of my design projects, so I needed to start with something I'm more familiar with - [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). 
-
-Once I have a chance to learn GraphQL, I'll be able to rebuild this site with Gatsby. Or, I might look into some other similar options like Next.js or React Static.
-
-
----
+----
 
 ### Credits
 
@@ -73,12 +55,9 @@ Here are the Glitch projects that helped me figure stuff out:
 - [airtable-example](https://glitch.com/~airtable-example)
 - [starter-react-template](https://glitch.com/~starter-react-template)
 
+----
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d542ec44-94b5-4fe2-b61d-f2909adf8e75/deploy-status)](https://app.netlify.com/sites/quirky-curie-d765f6/deploys)
+
 
    
-   
-   
-   
-      
----
+  
