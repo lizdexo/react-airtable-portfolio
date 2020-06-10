@@ -29,37 +29,33 @@ class About extends Component {
         <section className="content">
           <h2>About Me</h2>
           <p>
-            Hi! I'm a documentation specialist and I do a variety of creative
-            projects in my free time.{" "}
-          </p>
-          <p>
-            I like doing art & design, web development, technical
+            <img className="profilepic" src="https://cdn.glitch.com/49f5bf1b-a021-4e17-ade2-7ae4a5ef4a28%2Fhi.png?v=1591829335617" />
+          
+            Hi! I've have this website for a year and I'm still not quite sure what to put here. I like doing art & design, web development, technical
             documentation, and everything in between. If it involves
-            managing/developing informational resources or making useful things
+            managing and developing informational resources or making useful things
             that look nice, I'm probably into it.
-          </p>
+            
+             <dl className="tags">
+                      
+                      <dt style={{'width': '100%'}}>Skills & Experience</dt>
+                      
+                        <dd>HTML & CSS</dd>
+            <dd>Graphic Design</dd>
+            <dd>eLearning Development</dd>
+            <dd>Javascript</dd>
+            <dd>UX/UI Design</dd>
+            <dd>Documentation</dd>
+            <dd>Web Administration</dd>
 
-          <h3>Skills & Experience</h3>
-          <ul>
-            <li>HTML & CSS</li>
-            <li>Graphic Design</li>
-            <li>eLearning Development</li>
-            <li>Javascript</li>
-            <li>UX/UI Design</li>
-            <li>Documentation</li>
-            <li>Web Administration</li>
-          </ul>
-
-          <p>
-            For more details, find me on{" "}
-            <a
-              href="https://www.linkedin.com/in/dudekliz/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
+         
+                    </dl>
+            
           </p>
+          
+
+         
+
 
           <h3>Projects</h3>
 
@@ -72,7 +68,7 @@ class About extends Component {
         </section>
 
         <section id="readme">
-          <h2>About this Website</h2>
+          <h2>About This Website</h2>
 
           <p>
             The main purpose of this site is to showcase a portfolio of my
