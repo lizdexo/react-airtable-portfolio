@@ -77,14 +77,9 @@ class About extends Component {
           <p>
             The main purpose of this site is to showcase a portfolio of my
             personal & professional work, but behind the scenes it's also one
-            big practice project. 
+            big practice project. It's a constant work in progress, and I'm learning new things as I go.
           </p>
 
-          <p>
-            I coded it mostly from scratch as a way to exercise my development
-            skills, and because I figured it would be fun to start with a totally blank
-            canvas. It's a constant work in progress, and I'm learning new things as I go.
-          </p>
           <h3>Planning & Design</h3>
 
           <p><em>&#8618; See it <Link to="/gallery/recbKLKvHqUSxT3wP">here</Link>.</em></p>
