@@ -77,36 +77,19 @@ class About extends Component {
           <p>
             The main purpose of this site is to showcase a portfolio of my
             personal & professional work, but behind the scenes it's also one
-            big practice project.{" "}
+            big practice project. 
           </p>
 
           <p>
-            I coded it from scratch as a way to exercise my development
-            skills, and because I like having the flexibility of a totally blank
-            canvas. It's a constant <a href="#to-do-list">work in progress.</a>
+            I coded it mostly from scratch as a way to exercise my development
+            skills, and because I figured it would be fun to start with a totally blank
+            canvas. It's a constant work in progress, and I'm learning new things as I go.
           </p>
-
           <h3>Planning & Design</h3>
 
-          <p>
-            I used <a href="https://www.figma.com/" target="_blank">Figma</a>, <a href="https://milanote.com/" target="_blank">Milanote</a>, and <a href="https://codepen.io/" target="_blank">Codepen</a> to plan out what I wanted to do.
-          </p>
-
-          <h4>Mood Board & Mock-ups</h4>
-          <Figma src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FMwhf2ldcOKLsZF1NfqGP6M%2FPortfolio-Mood-Board-and-Design%3Fnode-id%3D0%253A1&chrome=DOCUMENTATION" />
-
-          <h4>Planning Notes</h4>
-
-          <img src="https://dl.airtable.com/.attachments/2d3d47bf95c4c1c2037abb093dd98761/13fe2b96/milanote-portfolio-planning.png" />
-
-          <h4>Rough Draft</h4>
-          <Codepen src="https://codepen.io/dexoplanet/embed/gOYZRGR?height=265&theme-id=light&default-tab=result" />
+          <p><em>&#8618; See it <Link to="/gallery/recbKLKvHqUSxT3wP">here</Link>.</em></p>
           
-          <h3>Implementation</h3>
-          <p>After considering various options, I decided to start with <a href="https://reactjs.org/" target="_blank">React</a> because I was already familiar with the basics of it and I wanted to get something put together quickly.</p>
-          <p>Since all of my project info was already organized in Airtable, I just had to learn how to work with the Airtable API so I continue using that for content management.</p>
-            
-            <p>Eventually I'd like to rebuild it with something meant for simple static websites like this, such as <a href="https://www.gatsbyjs.org/" target="_blank">GatsbyJS</a>.</p>
+          
 
           {this.state.readme !== "" ? (
             <>
@@ -121,11 +104,7 @@ class About extends Component {
 
           <h3 id="to-do-list">To Do List</h3>
 
-          <p>
-            There's a lot left to do when it comes to building and improving
-            this site, and I'm learning new things as I go. I'm a bit of a
-            perfectionist so I'm constantly finding things to fix & improve.{" "}
-          </p>
+          
 
           <iframe
             className="airtable-embed"
