@@ -204,12 +204,14 @@ details {
   
   dd {
     color: $offblack;  
-    font-size: 70%;
+    //font-size: 70%;
+   font-size: 0.7rem;
     display: inline-block;
     padding: 0.4rem 0.5rem;
     margin: 0.1rem;
     background-color: $ws-cyan;
     border-radius: 30px;
+    line-height: 1;
   }
   
 

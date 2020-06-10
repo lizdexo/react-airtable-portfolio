@@ -188,3 +188,16 @@ article.article {
   }
   
 }
+
+
+.profilepic {
+  width: 30%;
+  height: auto;
+  float: left;
+  //height:320px;
+ // object-fit: cover;  
+  background: rgba($purple-shadow, 0.1);
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
