@@ -31,7 +31,7 @@ class About extends Component {
           <p>
             <img className="profilepic" src="https://cdn.glitch.com/49f5bf1b-a021-4e17-ade2-7ae4a5ef4a28%2Fhi.png?v=1591829335617" />
           
-            Hi! I've have this website for a year and I'm still not quite sure what to put here. I like doing art & design, web development, technical
+            Hi! I like doing art & design, web development, technical
             documentation, and everything in between. If it involves
             managing and developing informational resources or making useful things
             that look nice, I'm probably into it.

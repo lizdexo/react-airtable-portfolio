@@ -28,10 +28,10 @@ import Home from "./components/Home.jsx";
 /* setting up some cool icons */
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faTimes, faSpinner, faEnvelopeSquare, faDribbbleSquare, faLinkedIn, faExternalLinkAlt, faGripHorizontal, faBookOpen, faExpand, faImages} from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faSpinner, faEnvelopeSquare, faDribbbleSquare, faLinkedIn, faExternalLinkAlt, faGripHorizontal, faBookOpen, faExpand, faImages, faTag} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(fab, faTimes, faSpinner, faEnvelopeSquare, faExternalLinkAlt, faGripHorizontal, faBookOpen, faExpand, faImages );
+library.add(fab, faTimes, faSpinner, faEnvelopeSquare, faExternalLinkAlt, faGripHorizontal, faBookOpen, faExpand, faImages, faTag );
 
 /* navigation */
 
