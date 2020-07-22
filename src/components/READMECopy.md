@@ -4,7 +4,7 @@
 
 - Scaffolding: [create-react-app](https://github.com/facebook/create-react-app)
 - Navigation: [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
-- Database: [Airtable](https://airtable.com/).
+- Database: [Airtable](https://airtable.com/invite/r/BX2EsDZh).
 - Styling: [node-sass](https://github.com/sass/node-sass)
 - IDE: [Glitch](https://glitch.com/)
 - Deployment: [Netlify](https://www.netlify.com/)
