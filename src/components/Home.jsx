@@ -22,7 +22,7 @@ class Home extends Component {
          See <Link to="/about">about</Link> for more details.</p>
           
           
-           <p>Skip to the <Link to="/gallery">gallery</Link> to see a collection of all my design-related projects.
+           <p>Skip to the <Link to="/gallery">gallery</Link> to see a collection of all my projects.
           <br />
          
           </p>

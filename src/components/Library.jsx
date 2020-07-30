@@ -57,6 +57,14 @@ export {Draft};
 
 /* --- Unused
 
+Snippets
+
+<small>Last updated: <time dateTime={this.props.YYYY + "-" + this.props.MM + "-" + this.props.DD}>{this.props.MM + "/" + this.props.DD + "/" + this.props.YYYY}</time></small>
+
+
+----------------------------------------------------
+
+
 const omit = (obj, omitKey) =>
   Object.keys(obj).reduce((result, key) => {
     if (key !== omitKey) {
