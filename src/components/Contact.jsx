@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ContactForm, { Basic } from "./Form.jsx";
 
 
 class Contact extends Component {
@@ -12,11 +13,12 @@ class Contact extends Component {
         <h1>Contact</h1>
         </section>
         <section className="content">
+          
+          <h2>Email Me</h2>
+       
+          
+          <ContactForm />
   
-          
-          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe className="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrR3KBVMEhNUqKO9?backgroundColor=purpleLight" frameborder="0" onmousewheel="" width="100%" height="856" style={{background: 'transparent', border: '0px solid #ccc'}}></iframe>
-          
-          
           
           
           

@@ -99,7 +99,33 @@ footer {
   width: 100%;
   
   ul {
+    padding: 0 1em;
     margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    li {
+      padding: 0 1rem;
+     min-height: 48px;
+   
+    }
+    
+    li a {
+      display: flex;
+      align-items: center;
+      align-content: center;
+       
+    }
+    
+    a:hover {
+       display: flex !important;
+    }
+    
+    svg,img {
+      margin-right: 5px;
+    }
+    
   }
   
   small {

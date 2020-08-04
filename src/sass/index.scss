@@ -77,6 +77,7 @@ When I eventually add a blog module, <header> and <footer> will be utilized with
 @import './components/placeholder.scss';
 @import './components/nav.scss';
 @import './components/sort.scss';
+@import './components/form.scss';
 
 
 // Media Queries
@@ -190,6 +191,10 @@ When I eventually add a blog module, <header> and <footer> will be utilized with
   #backtop {
     left: -0.5rem;
     float: left;
+  }
+  
+  .send {
+    width: 100%;
   }
   
   

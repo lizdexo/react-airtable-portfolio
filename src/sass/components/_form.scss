@@ -1,0 +1,112 @@
+form {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+
+.field {
+  
+   font-size: 125%;
+   margin-bottom: 2em;
+  
+  label {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: $offblack;
+  }
+  
+  abbr {
+    color: darken($pinkish, 10%);
+  }
+  
+ 
+}
+
+
+input, textarea {
+  
+  display: block;
+  background: #ffffff;
+  width: 100%;
+  border: 2px solid lighten($lavendar, 10%);
+  margin: 0;
+  outline: none;
+  box-shadow:none;
+  border-radius: 5px;
+  padding: 0.5rem;
+ color: lighten($offblack, 5%);
+  
+  &:-moz-placeholder{
+    box-shadow:none !important;
+  }
+  
+  
+   &:invalid {
+     border: 2px solid lighten($lavendar, 10%);
+     box-shadow: none;
+      //border: 2px dashed cyan;
+}
+  
+  &:invalid:required {
+ // background: yellow;
+}
+
+  
+  
+  &:valid {
+    border: 2px solid lighten($lavendar, 10%);
+    
+  }
+  
+  //event.target.style.border = '2px solid #9999FF';
+  
+  &:required {
+    
+  }
+  
+  &:optional {
+    
+  }
+  
+   &:focus {
+      //border: 2px solid lighten($lavendar, 10%);
+      border: 2px solid $lavendar !important;
+     box-shadow: inset 1px 1px 2px rgba(100, 100, 100, 0.3) !important;
+ 
+  }
+  
+  &:active {
+   // border: 2px solid $lavendar;
+
+  }
+  
+  
+}
+
+
+
+textarea {
+  overflow: auto;    
+}
+
+
+
+
+
+
+
+.error {
+  width  : 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
