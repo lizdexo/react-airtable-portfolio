@@ -145,3 +145,43 @@
   }
   
 }
+
+
+
+
+.send {
+  cursor: crosshair;
+  border: 0;
+         background: $dark-lavendar;
+          color: $white;
+          width: auto;
+          display: block;
+  float: right;
+          padding: 15px 2em;
+        border-radius: 3px;
+        box-shadow: $button-shadow;
+        z-index: 5000 !important;
+        
+        &:hover, &:active {
+          cursor: crosshair;
+          background: $lavendar;
+          color: $purpleywhite;
+          transition: all 100ms ease-out;
+          border-radius: 3px;
+          outline: none;
+          box-shadow: none;
+          transform:translate(1px,10px);
+          z-index: 1;
+        }
+        
+        &:focus {
+          background-color: $black;
+            box-shadow: none;
+        transform:translate(1px,10px);
+            z-index: 1;
+          
+        }
+  
+  
+
+}
