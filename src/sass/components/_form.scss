@@ -4,6 +4,8 @@ form {
 }
 
 
+
+
 .field {
   
    font-size: 125%;
@@ -22,6 +24,12 @@ form {
  
 }
 
+
+abbr[title] {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
 
 input, textarea {
   
@@ -47,9 +55,7 @@ input, textarea {
       //border: 2px dashed cyan;
 }
   
-  &:invalid:required {
- // background: yellow;
-}
+
 
   
   
@@ -58,15 +64,9 @@ input, textarea {
     
   }
   
-  //event.target.style.border = '2px solid #9999FF';
+ 
   
-  &:required {
-    
-  }
-  
-  &:optional {
-    
-  }
+ 
   
    &:focus {
       //border: 2px solid lighten($lavendar, 10%);
@@ -86,7 +86,8 @@ input, textarea {
 
 
 textarea {
-  overflow: auto;    
+  overflow: auto; 
+  min-height: 6em;
 }
 
 
